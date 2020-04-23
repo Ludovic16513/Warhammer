@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="604359eb-c185-4bfd-9734-6aff738fe6f6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectId" id="1anQjXbZgNickMm5zK6Kwn0Ay5R" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="D:/Exercices/Exemples-mySQLi-OOP-master" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projets\Warhammer\view" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projets\Warhammer" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="604359eb-c185-4bfd-9734-6aff738fe6f6" name="Default Changelist" comment="" />
+      <created>1587369013227</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587369013227</updated>
+      <workItem from="1587369014409" duration="17837000" />
+      <workItem from="1587396413043" duration="819000" />
+      <workItem from="1587397893898" duration="31000" />
+      <workItem from="1587399109768" duration="21000" />
+      <workItem from="1587406786771" duration="3292000" />
+      <workItem from="1587458266166" duration="19826000" />
+      <workItem from="1587485215729" duration="185000" />
+      <workItem from="1587485465274" duration="10984000" />
+      <workItem from="1587511283599" duration="848000" />
+      <workItem from="1587539460788" duration="27621000" />
+      <workItem from="1587582939600" duration="813000" />
+      <workItem from="1587583817611" duration="3918000" />
+      <workItem from="1587598857914" duration="1057000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="667" y="110" key="#PHP" timestamp="1587384193399">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="110" key="#PHP/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587384193399" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587498440953">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587498440953" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1587479718436">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587479718436" />
+    <state x="778" y="334" key="NewPhpClassDialog" timestamp="1587458841145">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="778" y="334" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587458841145" />
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1587599782201">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587599782201" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1587369016550">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587369016550" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1587581854598">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587581854598" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1587561617991">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587561617991" />
+    <state x="654" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587600248322">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="654" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587600248322" />
+    <state x="1968" y="0" width="1399" height="1027" maximized="true" key="dock-window-1" timestamp="1587462465433">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1968" y="0" width="1399" height="1027" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587462465433" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/model/LoginManager.php</url>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
