@@ -5,27 +5,25 @@
 $controller = $_REQUEST['controller'];
 $action = $_REQUEST['action'];
 
-switch($controller)
-{
-    case"chklogin":
+switch ($controller) {
+    case"user":
 
-        require "../model/Login.php";
-        require "../controller/LoginController.php";
+        require "../model/User.php";
+        require "../controller/UserController.php";
 
-        $ctrl = new LoginController();
+        $ctrl = new UserController();
 
-        switch($action)
-        {
-            case"Login":
-                $ctrl->Login();
+        switch ($action) {
+            case"login":
+                $ctrl->login();
                 break;
 
-            case"CheckLogin":
-                $ctrl->CheckLogin();
+            case"chklogin":
+                $ctrl->check_login();
                 break;
 
-            case "CreateLogin":
-                $ctrl->CreateLogin();
+            case"crtlogin":
+                $ctrl->create_login();
                 break;
         }
 
