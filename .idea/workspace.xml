@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="604359eb-c185-4bfd-9734-6aff738fe6f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/Login_admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/Login_update.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/Login_user.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/LoginOk.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/View_Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/View_Login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +85,7 @@
       <workItem from="1587912778366" duration="5822000" />
       <workItem from="1587925698044" duration="4000" />
       <workItem from="1587930465067" duration="2822000" />
-      <workItem from="1587970898690" duration="3479000" />
+      <workItem from="1587970898690" duration="3773000" />
     </task>
     <task id="LOCAL-00001" summary="Doublon ok">
       <created>1587817531880</created>
@@ -102,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587817531880</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Utilisateur terminé 90%, manque deconnection et le check admin">
+      <created>1587974471536</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587974471536</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,7 +109,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Doublon ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="Doublon ok" />
+    <MESSAGE value="Utilisateur terminé 90%, manque deconnection et le check admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Utilisateur terminé 90%, manque deconnection et le check admin" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="110" key="#PHP" timestamp="1587384193399">
@@ -125,10 +125,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587498440953" />
-    <state x="588" y="114" key="CommitChangelistDialog2" timestamp="1587817531206">
+    <state x="588" y="114" key="CommitChangelistDialog2" timestamp="1587974470929">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="588" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587817531206" />
+    <state x="588" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587974470929" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1587741439415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

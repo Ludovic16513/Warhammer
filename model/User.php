@@ -43,6 +43,29 @@ class User
     }
 
     /**
+     * @param $username
+     * @param $password
+     * @return array|bool|null
+     */
+    public function check_login_admin($username, $password)
+    {
+        $sql = "SELECT * FROM admin WHERE name = '$username'";
+        $query = $this->mysqli->query($sql);
+        $row = $query->fetch_assoc();
+        if ($query->num_rows > 0 && password_verify($password, $row['password'])) {
+            $this->mysqli->close();
+            return $this->row[] = $row;
+        } else {
+            return false;
+        }
+    }
+
+    public function disconnect()
+{
+    session_destroy();
+}
+
+    /**
      *
      */
     public function read_all_user()
