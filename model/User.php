@@ -3,12 +3,15 @@
 require '../config/db.php';
 require '../model/security.php';
 
+/**
+ * Class User
+ */
 class User
 {
 
     private $mysqli;
     private $row = array();
-
+    private $session_user;
 
     public function __construct(Db $dbObj)
     {
@@ -21,23 +24,28 @@ class User
         return $this->row;
     }
 
-    public function check_login($username, $password)
+    /**
+     * @param $username
+     * @param $password
+     * @return array|bool|null
+     */
+    public function check_login_user($username, $password)
     {
         $sql = "SELECT * FROM user WHERE name = '$username'";
         $query = $this->mysqli->query($sql);
         $row = $query->fetch_assoc();
         if ($query->num_rows > 0 && password_verify($password, $row['password'])) {
-            echo 'ok';
             $this->mysqli->close();
             return $this->row[] = $row;
-
-        }
-        else {
+        } else {
             return false;
         }
     }
 
-    public function read_user()
+    /**
+     *
+     */
+    public function read_all_user()
     {
         $sql = "SELECT * FROM user";
         $query = $this->mysqli->query($sql);
@@ -46,6 +54,35 @@ class User
         }
     }
 
+    /**
+     * @param $id
+     */
+    public function delete_user($id)
+    {
+        $sql = "DELETE FROM `user` WHERE id = '$id'";
+        $query = $this->mysqli->query($sql);
+    }
+
+    /**
+     * @param $session
+     * @return array|null
+     */
+    public function read_one_user($session)
+    {
+        $sql = "SELECT * FROM user WHERE name = '$session'";
+        $query = $this->mysqli->query($sql);
+        while ($row = $query->fetch_assoc()) {
+           $this->row[] = $row;
+        }
+        return $row;
+    }
+
+    /**
+     * @param $name
+     * @param $pass
+     * @param $email
+     * @return string
+     */
     public function create_login($name, $pass, $email)
     {
         // on crypte le mot de passe
@@ -59,6 +96,7 @@ class User
             if (!($stmt = $this->mysqli->prepare('INSERT INTO user(name, password, email) VALUES (?,?,?)'))) {
                 return "Echec de la préparation : (" . $this->mysqli->errno . ") " . $this->mysqli->error;
             }
+
             // on ajoute les valeurs à la préparation et on définit leur type.
             if (!$stmt->bind_param("sss", $name, $hash, $email)) {
                 return "Echec lors du liage des paramètres : (" . $stmt->errno . ") " . $stmt->error;
@@ -67,13 +105,35 @@ class User
             if (!$stmt->execute()) {
                 return "Echec lors de l'exécution : (" . $stmt->errno . ") " . $stmt->error;
             }
-            else {
-                return false;
-            }
+        } else {
+            echo 'utilisateur ou email existant';
         }
-        else {
-            echo 'utilisaeur existant';
-        }
+        return $sql;
+    }
+
+    /**
+     * @param $name
+     * @param $pass
+     * @param $email
+     * @param $id
+     * @return string
+     */
+    public function update_user($name, $pass, $email, $id)
+    {
+        $hash = password_hash($pass, PASSWORD_BCRYPT);
+
+        $sql = 'UPDATE user SET name=?, password=?, email=? WHERE id=?';
+
+        $stmt = $this->mysqli->prepare($sql);
+
+        $stmt->bind_param('sssi', $name, $hash, $email, $id);
+        $stmt->execute();
+
+        if ($stmt->error) {
+            echo "FAILURE" . $stmt->error;
+        } else echo "Updated {$stmt->affected_rows} rows";
+        $stmt->close();
+
         return $sql;
     }
 

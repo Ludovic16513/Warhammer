@@ -11,36 +11,73 @@ class UserController
     }
 
 
+    public function delete_user()
+    {
+        $id =  $_GET['id'];
+        $this->user->delete_user($id);
+    }
+
+    public function read_one_user()
+    {
+        session_start();
+        if (!$_GET['id']){
+            $session =  $_SESSION['user'];
+            $this->user->read_one_user($session);
+            $row = $this->user->getRow();
+        }
+    }
+
     public function login()
     {
-        $this->user->read_user();
+        session_start();
+        if (isset($_SESSION['user'])) {
+            $session = $_SESSION['user'];
+            $this->user->read_one_user($session);
+            $row = $this->user->getRow();
+            include '../view/Login_user.php';
+        }
+    else{
+        $this->user->read_all_user();
         $row = $this->user->getRow();
         include '../view/View_Login.php';
     }
 
-    public function check_login()
+    }
+
+    public function login_update()
+    {
+        session_start();
+        $session =  $_SESSION['user'];
+        $this->user->read_one_user($session);
+        $row = $this->user->getRow();
+        include '../view/Login_update.php';
+    }
+
+
+    public function check_login_user()
     {
         session_start();
         if (isset($_POST['login'])) {
             $username = $this->user->escape_string($_POST['username']);
             $password = $this->user->escape_string($_POST['password']);
 
-            $auth = $this->user->check_login($username, $password);
+            $auth = $this->user->check_login_user($username, $password);
             $row = $this->user->getRow();
 
             if (!$auth) {
                 $_SESSION['message'] = 'Invalid username or password';
                 include '../view/View_Login.php';
             } else {
-                $_SESSION['user'] = $auth;
+                $_SESSION['user'] = $username;
                 $row = $this->user->getRow();
-                include '../view/LoginOk.php';
+                include '../view/Login_user.php';
             }
         } else {
             $_SESSION['message'] = 'You need to login first';
             include '../view/View_Login.php';
         }
     }
+
 
 
     public function create_login()
@@ -54,10 +91,30 @@ class UserController
             $auth = $this->user->create_login($username, $pass, $email);
 
             if ($auth) {
-                $_SESSION['message'] = 'Inscription effectuée';
+                echo 'Inscription effectuée';
             }
             else{
-                $_SESSION['message'] = 'L inscription a été annulée';
+                echo 'L inscription a été annulée';
+            }
+        }
+    }
+
+    public function update_user()
+    {
+        if (isset($_POST['update'])) {
+
+            $name = $this->user->escape_string($_POST['update_name']);
+            $email = $this->user->escape_string($_POST['update_email']);
+            $pass = $this->user->escape_string($_POST['update_pass']);
+            $id = $this->user->escape_string($_POST['id']);
+
+            $auth = $this->user->update_user($name,$pass,$email,$id);
+
+            if ($auth) {
+                echo 'Update effectué';
+            }
+            else{
+                echo 'L update a été annulée';
             }
         }
     }
