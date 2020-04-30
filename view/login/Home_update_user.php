@@ -3,7 +3,7 @@
 require_once '../model/User.php';
 
 foreach($row as $result) { ?>
-    <form action="../public/index.php?controller=user&action=up_user" method="post">
+    <form action="../../public/LaMineDuNainBlanc.php?controller=user&action=up_user" method="post">
         <input type="text" name="update_name" required value="<?php echo $result['name'] ?>">
         <input type="password" name="update_pass"  required placeholder="Hfgfg51212" maxlength="20" pattern = "^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" value=""<?php echo $result['password'] ?>"">
         <input type="email" name=update_email required
@@ -13,3 +13,5 @@ foreach($row as $result) { ?>
         <button type="submit" name="update">Update</button>
     </form>
 <?php } ?>
+
+

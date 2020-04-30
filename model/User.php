@@ -1,7 +1,6 @@
 <?php
 
-require '../config/db.php';
-require '../model/security.php';
+include('../config/db.php');
 
 /**
  * Class User
@@ -11,7 +10,6 @@ class User
 
     private $mysqli;
     private $row = array();
-    private $session_user;
 
     public function __construct(Db $dbObj)
     {
@@ -60,9 +58,12 @@ class User
         }
     }
 
+    /**
+     * @return bool
+     */
     public function disconnect()
 {
-    session_destroy();
+   return session_destroy();
 }
 
     /**
@@ -99,6 +100,21 @@ class User
         }
         return $row;
     }
+
+    /**
+     * @param $session
+     * @return array|null
+     */
+    public function read_one_admin($session)
+    {
+        $sql = "SELECT * FROM admin WHERE name = '$session'";
+        $query = $this->mysqli->query($sql);
+        while ($row = $query->fetch_assoc()) {
+            $this->row[] = $row;
+        }
+        return $row;
+    }
+
 
     /**
      * @param $name
@@ -157,7 +173,7 @@ class User
         } else echo "Updated {$stmt->affected_rows} rows";
         $stmt->close();
 
-        return $sql;
+        return $stmt;
     }
 
     public function escape_string($value)

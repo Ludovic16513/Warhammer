@@ -1,8 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="604359eb-c185-4bfd-9734-6aff738fe6f6" name="Default Changelist" comment="">
+    <list default="true" id="604359eb-c185-4bfd-9734-6aff738fe6f6" name="Default Changelist" comment="probleme index.php dans view article">
+      <change afterPath="$PROJECT_DIR$/css/articles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/header_user.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/404px-NainsContreDémons.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/dw21-mynt-07_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/mon_256.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/nain610.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/nicubunu-RPG-map-symbols-Mine-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/snow_fantasy_landscape_by_jjpeabody_d8fcuyk-fullview.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/unnamed.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/article.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/LaMineDuNainBlanc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/header_connected.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/header_disconnected.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/article/Hom_update_article.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/article/Home_article.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/article/Home_create_admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/article/home_articles.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/article/img/404px-NainsContreDémons.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/article/img/dw21-mynt-07_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/article/img/mon_256.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/article/img/nain610.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/article/img/nicubunu-RPG-map-symbols-Mine-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/article/img/snow_fantasy_landscape_by_jjpeabody_d8fcuyk-fullview.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/article/img/unnamed.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/login/Home_admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/login/Home_member_admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/login/Login_admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Mail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/security.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Login_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Login_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login/Home_update_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Login_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login/Home_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/View_Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login/login_user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,19 +74,36 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/view" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Projets\Warhammer\view" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Projets\Warhammer\view" />
-      <recent name="D:\Projets\Warhammer\view\login" />
       <recent name="D:\Projets\Warhammer" />
+      <recent name="D:\Projets\Warhammer\public" />
+      <recent name="D:\Projets\Warhammer\view\login" />
+      <recent name="D:\Projets\Warhammer\model" />
+      <recent name="D:\Projets\Warhammer\view" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projets\Warhammer" />
+      <recent name="D:\Projets\Warhammer\view\article" />
+      <recent name="D:\Projets\Warhammer\public" />
+      <recent name="D:\Projets\Warhammer\public\css" />
+      <recent name="D:\Projets\Warhammer\view" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="home_articles.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/view/article/home_articles.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.home_articles.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -84,7 +139,21 @@
       <workItem from="1587912778366" duration="5822000" />
       <workItem from="1587925698044" duration="4000" />
       <workItem from="1587930465067" duration="2822000" />
-      <workItem from="1587970898690" duration="4015000" />
+      <workItem from="1587970898690" duration="40900000" />
+      <workItem from="1588058472142" duration="16562000" />
+      <workItem from="1588080120847" duration="3537000" />
+      <workItem from="1588083670973" duration="1273000" />
+      <workItem from="1588088789252" duration="6503000" />
+      <workItem from="1588114764133" duration="4073000" />
+      <workItem from="1588163096703" duration="16702000" />
+      <workItem from="1588183994529" duration="645000" />
+      <workItem from="1588184887881" duration="5254000" />
+      <workItem from="1588198493524" duration="4094000" />
+      <workItem from="1588202601832" duration="1974000" />
+      <workItem from="1588204583789" duration="23000" />
+      <workItem from="1588204614883" duration="874000" />
+      <workItem from="1588211583879" duration="923000" />
+      <workItem from="1588228722784" duration="11329000" />
     </task>
     <task id="LOCAL-00001" summary="Doublon ok">
       <created>1587817531880</created>
@@ -107,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587974860934</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Utilisateur terminé 90%, manque le controller login admin et le disconnect">
+      <created>1587974919879</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1587974919879</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,46 +200,66 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="667" y="110" key="#PHP/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587384193399" />
-    <state x="714" y="32" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587728647207">
+    <state x="714" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588204940062">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="714" y="32" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587728647207" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587498440953">
+    <state x="714" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588204940062" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588088941982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587498440953" />
-    <state x="588" y="114" key="CommitChangelistDialog2" timestamp="1587974860526">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588088941982" />
+    <state x="707" y="376" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1587976689375">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="588" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587974860526" />
+    <state x="707" y="376" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587976689375" />
+    <state x="588" y="114" key="CommitChangelistDialog2" timestamp="1588241475310">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="588" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588241475310" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1587741439415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587741439415" />
-    <state x="778" y="334" key="NewPhpClassDialog" timestamp="1587727164965">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1588205488943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="778" y="334" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587727164965" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1587920512795">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588205488943" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1588205488943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587920512795" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588205488943" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1588205488943">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588205488943" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1588205488943">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588205488943" />
+    <state x="778" y="334" key="NewPhpClassDialog" timestamp="1587994277072">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="778" y="334" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587994277072" />
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1588229139981">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588229139981" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1587930621732">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587930621732" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1587973257930">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1588234266344">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587973257930" />
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1587973799197">
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588234266344" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588185263172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587973799197" />
-    <state x="654" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587970905598">
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588185263172" />
+    <state x="654" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588228730976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="654" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587970905598" />
+    <state x="654" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588228730976" />
     <state x="729" y="150" width="494" height="739" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1587930560838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
