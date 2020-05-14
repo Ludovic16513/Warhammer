@@ -89,70 +89,51 @@ switch ($controller) {
 
         $ctrl = new ArticleController();
 
-
         switch ($action) {
+
             case"admin_article":
                 $ctrl->admin_articles();
                 break;
-        }
 
-
-        switch ($action) {
             case"admin_create_article":
                 $ctrl->admin_create_article();
                 break;
-        }
 
-        switch ($action) {
             case"request_create_article":
                 $ctrl->create_article();
                 break;
-        }
 
 
-        switch ($action) {
-            case"request_create_article":
-                $ctrl->create_article();
-                break;
-        }
-
-        switch ($action) {
             case"request_delete_article":
                 $ctrl->delete_article();
                 break;
-        }
 
-        switch ($action) {
             case"home_articles":
                 $ctrl->home_articles();
                 break;
-        }
 
-        switch ($action) {
             case"home_article":
                 $ctrl->home_article();
                 break;
-        }
 
-        switch ($action) {
             case"upgrade_article":
                 $ctrl->home_update_article_admin();
                 break;
-        }
 
-        switch ($action) {
             case"request_upgrade_article":
                 $ctrl->update_article_admin();
                 break;
-        }
 
-        break;
+                break;
+        }
 }
 
 switch ($controller) {
 
     case"sheet":
+
         require "controller/SheetController.php";
+
         $ctrl = new SheetController();
 
 
@@ -160,22 +141,18 @@ switch ($controller) {
             case"select_sheets":
                 $ctrl->select_sheets();
                 break;
-        }
 
-
-        switch ($action) {
             case"add_sheet":
                 $ctrl->create_sheet();
                 break;
-        }
-        switch ($action) {
+
             case"delete_sheet":
                 $ctrl->delete_sheet();
                 break;
+
+                break;
         }
 
-        break;
 }
+include 'footer.php';
 
-include 'footer.php'
-?>

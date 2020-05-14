@@ -10,7 +10,6 @@ foreach ($row as $article){
 $content = utf8_encode($article['content']);
 
 ?>
-
 <div class="c0-articles" style="background-image: url('<?php echo "img/".$article['picture']?>')">
 </div>
 
@@ -19,9 +18,6 @@ $content = utf8_encode($article['content']);
         <div class="c2-articles"><?php echo substr($content, 1, 300) . ' ...' ?>
         </div>
     </div>
-
-
-
     <?php
 }
 ?>

@@ -1,39 +1,51 @@
-
-<div class="container-menu">
-    <div class="c0-menu"><a href="index.php?controller=user&action=home_user">Retour profil</a></div>
-</div>
+ <div class="c1">
+     <?php
 
 
+     foreach($row as $result) { ?>
+         <?php $result['id'];
+         $timestamp = strtotime($result['date_joined']);
+         $result['id'];
+         ?>
+     <?php } ?>
 
-<div class="container-title">
-    <div class="c0-title">GESTION DES FEUILLES</div>
-</div>
+     <html class="background_user">
+     <div>
+         <?php if (isset($_SESSION['message'])){
+             echo ($_SESSION['message']);
+             unset($_SESSION['message']);
+             utf8_encode($result['email']) ;
+         } ?>
+     </div>
 
-<div class="container-bar">
-    <div class="c0-bar"></div>
-    <div class="c1-bar">Titre des feuilles</div>
-    <div class="c2-bar">Date</div>
-    <div class="c3-bar">Supprimer</div>
-    <div class="c4-bar"></div>
-</div>
+     <div class="container_user">
+         <div class="avatar"></div>
+         <div class="pseudo : "><?php echo $_SESSION['user']?></div>
+         <div class="joined">Joined : <?php  echo date("d-m-Y", $timestamp); ?></div>
 
+         <div class="user">Profil</div>
+         <div class="sheet">MES FEUILLES</div>
+         <div class="rank">Rang</div>
 
-<div class="container-c0">
-    <div class="c0">
-        <?php
-        foreach ($row as $sheet) { ?>
-        <?php } ?>
-        <a href="index.php?controller=sheet&action=add_sheet&id_user=<?php echo $sheet['id_user']?>"></a>
-    </div>
+         <div class="victory"> Victoire :</div>
+         <div class="interest">Biere et vin</div>
+         <?php
+         foreach($row as $result) {
+             $timestamp = strtotime($result['date']);
+             ?>
+             <div class="title">Titre</div>
+             <div class="sheet-title">
+                 <a href="js/calculator/calculator.php?id=<?php echo utf8_encode($result['id'])?>"><?php echo utf8_encode($result['title'])?></a>
+             </div>
+             <div class="date">date</div>
+             <div class="sheet-date">
+                 <?php  echo date("d-m-Y", $timestamp); ?>
+             </div>
+             <div class="delete">delete</div>
+             <div class="sheet-delete">
+                 <a class="a-delete" href="index.php?controller=sheet&action=delete_sheet&id=<?php echo $result['id_sheet']?>"></a>
+             </div>
+         <?php } ?>
+     </div>
+     </html>
 
-    <?php
-    foreach ($row as $sheet) {
-        $timestamp = strtotime($sheet['date']);
-        ?>
-    <div class="c1"><a href="js/calculator/calculator.php?id=<?php echo utf8_encode($sheet['id'])?>"><?php echo utf8_encode($sheet['title'])?></a>
-    <p></p></div>
-    <div class="c2"><?php echo date("d-m-Y", $timestamp); ?></div>
-    <div class="c3"><a class="a-delete" href="index.php?controller=sheet&action=delete_sheet&id=<?php echo $sheet['id']?>"></a></div>
-    <div class="c4"></div>
-    <?php } ?>
-</div>

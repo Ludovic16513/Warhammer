@@ -27,7 +27,7 @@ class SheetController
             $row = $this->sheet->getRow();
             include 'view/sheet/user_sheet.php';
         } else {
-            $_SESSION['message'] = 'You need to login first';
+            $_SESSION['message'] = 'Veuillez vous connecter';
             include 'view/login/login_user.php';
         }
     }

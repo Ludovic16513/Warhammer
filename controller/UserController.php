@@ -1,6 +1,7 @@
 <?php
 require_once 'model/User.php';
 
+
 /**
  * Class UserController
  */
@@ -49,13 +50,7 @@ class UserController
 
 
         if ($_SESSION['user']){ // Verif de la connexion d'un utilisateur
-            $session =  $_SESSION['user'];
-            $this->user->escape_string($session);
-
-            // Lance l'affichage d'un utilisateur puis redirection vers la page de l'utilisateur.
-            $this->user->read_one_login_user($session);
-            $row = $this->user->getRow();
-            include 'view/login/Home_user.php';
+            header('Location: index.php?controller=sheet&action=select_sheets');
         }
         else{ // Redirection si echec de connexion
             $_SESSION['message'] = 'Veuillez vous connecter';
