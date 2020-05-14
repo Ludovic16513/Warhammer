@@ -1,46 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="604359eb-c185-4bfd-9734-6aff738fe6f6" name="Default Changelist" comment="probleme index.php dans view article">
-      <change afterPath="$PROJECT_DIR$/css/articles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/header_user.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/404px-NainsContreDémons.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/dw21-mynt-07_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/mon_256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/nain610.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/nicubunu-RPG-map-symbols-Mine-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/snow_fantasy_landscape_by_jjpeabody_d8fcuyk-fullview.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/unnamed.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/article.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/LaMineDuNainBlanc.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/header_connected.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/header_disconnected.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/article/Hom_update_article.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/article/Home_article.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/article/Home_create_admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/article/home_articles.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/article/img/404px-NainsContreDémons.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/article/img/dw21-mynt-07_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/article/img/mon_256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/article/img/nain610.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/article/img/nicubunu-RPG-map-symbols-Mine-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/article/img/snow_fantasy_landscape_by_jjpeabody_d8fcuyk-fullview.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/article/img/unnamed.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/login/Home_admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/login/Home_member_admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/login/Login_admin.php" afterDir="false" />
+    <list default="true" id="604359eb-c185-4bfd-9734-6aff738fe6f6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/controller/SheetController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/admin_template.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/articles_templates.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/header-template.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/input_template.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/user_template.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/calculator/armor_select.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/calculator/armor_value.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/calculator/calculator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/calculator/db.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/calculator/delete_unit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/calculator/insert_unit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/calculator/unit_value.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/calculator/weapon_select.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/calculator/weapon_value.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/sheet.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/article/home_article_admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/login/Home_admin_create_user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/sheet/user_sheet.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ArticleController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Mail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/articles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/footer_template.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/header_user.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/dw21-mynt-07_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/dw.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/security.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Login_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ArticleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Login_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login/Home_update_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Login_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login/Home_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/View_Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login/login_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/article.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/LaMineDuNainBlanc.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/header_connected.php" beforeDir="false" afterPath="$PROJECT_DIR$/header_connected.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/header_disconnected.php" beforeDir="false" afterPath="$PROJECT_DIR$/header_disconnected.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/article/Hom_update_article.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/article/Hom_update_article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/article/Home_article.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/article/home_article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/article/Home_create_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/article/Home_create_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/article/home_articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/article/home_articles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/article/img/404px-NainsContreDémons.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/article/img/dw21-mynt-07_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/article/img/mon_256.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/article/img/nain610.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/article/img/nicubunu-RPG-map-symbols-Mine-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/article/img/snow_fantasy_landscape_by_jjpeabody_d8fcuyk-fullview.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/article/img/unnamed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/login/Home_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login/Home_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/login/Home_member_admin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/login/Home_update_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login/Home_update_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/login/Home_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login/Home_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/login/Login_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login/login_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/login/login_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login/login_user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,51 +60,66 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution>
-      <executable />
-    </execution>
+    <execution />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1anQjXbZgNickMm5zK6Kwn0Ay5R" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/view/sheet" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projets\Warhammer\js" />
+      <recent name="D:\Projets\Warhammer\js\Calculator" />
       <recent name="D:\Projets\Warhammer" />
       <recent name="D:\Projets\Warhammer\public" />
       <recent name="D:\Projets\Warhammer\view\login" />
-      <recent name="D:\Projets\Warhammer\model" />
-      <recent name="D:\Projets\Warhammer\view" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projets\Warhammer\view\sheet" />
       <recent name="D:\Projets\Warhammer" />
       <recent name="D:\Projets\Warhammer\view\article" />
       <recent name="D:\Projets\Warhammer\public" />
       <recent name="D:\Projets\Warhammer\public\css" />
-      <recent name="D:\Projets\Warhammer\view" />
     </key>
   </component>
   <component name="RunManager">
@@ -153,7 +180,63 @@
       <workItem from="1588204583789" duration="23000" />
       <workItem from="1588204614883" duration="874000" />
       <workItem from="1588211583879" duration="923000" />
-      <workItem from="1588228722784" duration="11329000" />
+      <workItem from="1588228722784" duration="13487000" />
+      <workItem from="1588247407421" duration="10876000" />
+      <workItem from="1588275222668" duration="942000" />
+      <workItem from="1588302546092" duration="4420000" />
+      <workItem from="1588307225399" duration="5905000" />
+      <workItem from="1588335497970" duration="10525000" />
+      <workItem from="1588351806659" duration="9213000" />
+      <workItem from="1588365887945" duration="5672000" />
+      <workItem from="1588373983308" duration="24394000" />
+      <workItem from="1588454277395" duration="3341000" />
+      <workItem from="1588463373713" duration="2287000" />
+      <workItem from="1588510442889" duration="25329000" />
+      <workItem from="1588553542938" duration="7027000" />
+      <workItem from="1588593875282" duration="22244000" />
+      <workItem from="1588633085099" duration="13195000" />
+      <workItem from="1588650632350" duration="20554000" />
+      <workItem from="1588762294396" duration="23197000" />
+      <workItem from="1588796643692" duration="473000" />
+      <workItem from="1588803111016" duration="12842000" />
+      <workItem from="1588846737560" duration="2264000" />
+      <workItem from="1588849012653" duration="5896000" />
+      <workItem from="1588866486729" duration="28994000" />
+      <workItem from="1588908920976" duration="464000" />
+      <workItem from="1588909394317" duration="6329000" />
+      <workItem from="1588962609037" duration="1066000" />
+      <workItem from="1588963688608" duration="169000" />
+      <workItem from="1588963885312" duration="1147000" />
+      <workItem from="1588965050063" duration="241000" />
+      <workItem from="1588965299188" duration="67000" />
+      <workItem from="1588965374586" duration="460000" />
+      <workItem from="1588965842827" duration="306000" />
+      <workItem from="1588966156816" duration="2580000" />
+      <workItem from="1588968745860" duration="2525000" />
+      <workItem from="1588971297601" duration="149000" />
+      <workItem from="1588971455387" duration="7217000" />
+      <workItem from="1588989654549" duration="14038000" />
+      <workItem from="1589007577409" duration="94000" />
+      <workItem from="1589007680275" duration="3405000" />
+      <workItem from="1589079374162" duration="27557000" />
+      <workItem from="1589142986725" duration="8218000" />
+      <workItem from="1589151219320" duration="3828000" />
+      <workItem from="1589155129996" duration="2757000" />
+      <workItem from="1589164682992" duration="16969000" />
+      <workItem from="1589200806119" duration="637000" />
+      <workItem from="1589201450659" duration="120000" />
+      <workItem from="1589201580240" duration="17075000" />
+      <workItem from="1589224127467" duration="466000" />
+      <workItem from="1589224604133" duration="347000" />
+      <workItem from="1589224962141" duration="1418000" />
+      <workItem from="1589244167970" duration="16155000" />
+      <workItem from="1589267195049" duration="53000" />
+      <workItem from="1589267256472" duration="29803000" />
+      <workItem from="1589333188799" duration="2122000" />
+      <workItem from="1589335418026" duration="7594000" />
+      <workItem from="1589343170845" duration="29873000" />
+      <workItem from="1589416985850" duration="849000" />
+      <workItem from="1589430481929" duration="6711000" />
     </task>
     <task id="LOCAL-00001" summary="Doublon ok">
       <created>1587817531880</created>
@@ -183,43 +266,59 @@
       <option name="project" value="LOCAL" />
       <updated>1587974919879</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Mise en place du CSS pour els articles et le login">
+      <created>1588241701008</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1588241701008</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Doublon ok" />
     <MESSAGE value="Utilisateur terminé 90%, manque deconnection et le check admin" />
     <MESSAGE value="Utilisateur terminé 90%, manque le controller login admin et le disconnect" />
-    <option name="LAST_COMMIT_MESSAGE" value="Utilisateur terminé 90%, manque le controller login admin et le disconnect" />
+    <MESSAGE value="Mise en place du CSS pour els articles et le login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mise en place du CSS pour els articles et le login" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="110" key="#PHP" timestamp="1587384193399">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="667" y="110" key="#PHP/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587384193399" />
+    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1589416866932">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589416866932" />
     <state x="714" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588204940062">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="714" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588204940062" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588088941982">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589145162822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588088941982" />
-    <state x="707" y="376" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1587976689375">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589145162822" />
+    <state x="707" y="376" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1588303282964">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="707" y="376" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587976689375" />
-    <state x="588" y="114" key="CommitChangelistDialog2" timestamp="1588241475310">
+    <state x="707" y="376" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588303282964" />
+    <state x="588" y="114" key="CommitChangelistDialog2" timestamp="1588241700060">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="588" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588241475310" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1587741439415">
+    <state x="588" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588241700060" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1588646072223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587741439415" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588646072223" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1589362126176">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589362126176" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1588205488943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -236,30 +335,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588205488943" />
-    <state x="778" y="334" key="NewPhpClassDialog" timestamp="1587994277072">
+    <state x="778" y="334" key="NewPhpClassDialog" timestamp="1588641443404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="778" y="334" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587994277072" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1588229139981">
+    <state x="778" y="334" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588641443404" />
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1589258745178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588229139981" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1587930621732">
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589258745178" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1588332276040">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587930621732" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1588234266344">
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588332276040" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1589225223109">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588234266344" />
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588185263172">
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589225223109" />
+    <state x="122" y="151" width="1736" height="856" maximized="true" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1588646072223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588185263172" />
-    <state x="654" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588228730976">
+    <state x="122" y="151" width="1736" height="856" maximized="true" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588646072223" />
+    <state x="-179" y="48" width="1736" height="890" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589410390274">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="654" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588228730976" />
+    <state x="-179" y="48" width="1736" height="890" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589410390274" />
+    <state x="654" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1589343203430">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="654" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589343203430" />
     <state x="729" y="150" width="494" height="739" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1587930560838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -268,20 +371,17 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="1968" y="0" width="1399" height="1027" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587462465433" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1587772262186">
+    <state x="593" y="65" width="734" height="909" key="find.popup" timestamp="1589223942968">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587772262186" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/controller/UserController.php</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="593" y="65" width="734" height="909" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589223942968" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1589225416462">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589225416462" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1589361840614">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589361840614" />
   </component>
 </project>

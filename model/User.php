@@ -1,13 +1,12 @@
 <?php
 
-include('../config/db.php');
+include('config/db.php');
 
 /**
  * Class User
  */
 class User
 {
-
     private $mysqli;
     private $row = array();
 
@@ -17,6 +16,9 @@ class User
         $this->row = $this->getRow();
     }
 
+    /**
+     * @return array|mixed
+     */
     public function getRow()
     {
         return $this->row;
@@ -33,7 +35,6 @@ class User
         $query = $this->mysqli->query($sql);
         $row = $query->fetch_assoc();
         if ($query->num_rows > 0 && password_verify($password, $row['password'])) {
-            $this->mysqli->close();
             return $this->row[] = $row;
         } else {
             return false;
@@ -51,31 +52,34 @@ class User
         $query = $this->mysqli->query($sql);
         $row = $query->fetch_assoc();
         if ($query->num_rows > 0 && password_verify($password, $row['password'])) {
-            $this->mysqli->close();
-            return $this->row[] = $row;
+        return $row;
         } else {
             return false;
         }
     }
+
+
 
     /**
      * @return bool
      */
     public function disconnect()
 {
-   return session_destroy();
+    unset($_SESSION['user']);
 }
 
+
     /**
-     *
+     * @return string
      */
     public function read_all_user()
     {
-        $sql = "SELECT * FROM user";
+        $sql = "SELECT * FROM `user`";
         $query = $this->mysqli->query($sql);
         while ($row = $query->fetch_assoc()) {
             $this->row[] = $row;
         }
+        return $sql;
     }
 
     /**
@@ -84,19 +88,33 @@ class User
     public function delete_user($id)
     {
         $sql = "DELETE FROM `user` WHERE id = '$id'";
-        $query = $this->mysqli->query($sql);
+        $this->mysqli->query($sql);
     }
 
     /**
      * @param $session
      * @return array|null
      */
-    public function read_one_user($session)
+    public function read_one_user($id)
+    {
+        $sql = "SELECT * FROM user WHERE id = '$id'";
+        $query = $this->mysqli->query($sql);
+        while ($row = $query->fetch_assoc()) {
+           $this->row[] = $row;
+        }
+        return $row;
+    }
+
+    /**
+     * @param $session
+     * @return array|null
+     */
+    public function read_one_login_user($session)
     {
         $sql = "SELECT * FROM user WHERE name = '$session'";
         $query = $this->mysqli->query($sql);
         while ($row = $query->fetch_assoc()) {
-           $this->row[] = $row;
+            $this->row[] = $row;
         }
         return $row;
     }
@@ -133,19 +151,18 @@ class User
         if ($query->num_rows === 0) {
             // on prepare la requête en indiquant les lignes à insérer.
             if (!($stmt = $this->mysqli->prepare('INSERT INTO user(name, password, email) VALUES (?,?,?)'))) {
-                return "Echec de la préparation : (" . $this->mysqli->errno . ") " . $this->mysqli->error;
+                return $_SESSION['Message'] = "Echec de la préparation : (" . $this->mysqli->errno . ") " . $this->mysqli->error;
             }
-
             // on ajoute les valeurs à la préparation et on définit leur type.
             if (!$stmt->bind_param("sss", $name, $hash, $email)) {
-                return "Echec lors du liage des paramètres : (" . $stmt->errno . ") " . $stmt->error;
+                return $_SESSION['Message'] = "Echec lors du liage des paramètres : (" . $stmt->errno . ") " . $stmt->error;
             }
             // On execute le la requête.
             if (!$stmt->execute()) {
-                return "Echec lors de l'exécution : (" . $stmt->errno . ") " . $stmt->error;
+                return $_SESSION['Message'] = "Echec lors de l'exécution : (" . $stmt->errno . ") " . $stmt->error;
             }
         } else {
-            echo 'utilisateur ou email existant';
+            echo $_SESSION['Message'] = 'Utilisateur ou email déjà existant';
         }
         return $sql;
     }
@@ -169,15 +186,20 @@ class User
         $stmt->execute();
 
         if ($stmt->error) {
-            echo "FAILURE" . $stmt->error;
+           echo  "FAILURE" . $stmt->error;
         } else echo "Updated {$stmt->affected_rows} rows";
         $stmt->close();
 
-        return $stmt;
     }
 
+    /**
+     * @param $value
+     *
+     */
     public function escape_string($value)
     {
-        return $this->mysqli->real_escape_string($value);
+        strip_tags($value);
+        htmlentities($value);
+        $this->mysqli->real_escape_string($value);
     }
 }

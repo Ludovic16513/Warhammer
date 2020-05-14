@@ -1,27 +1,31 @@
-<body>
-<div class="case_article"></div>
-<div class="news">News and guides</div>
+<html class="articles">
+<div class="container-js">
+       <p class="c0-js" >Les nouvelles de l'éclaireur</p>
+</div>
 
+
+<div class="container-articles">
 <?php
-foreach ($row as $article) { $content =
-    utf8_encode($article['content']); ?>
+foreach ($row as $article){
+$content = utf8_encode($article['content']);
 
-    <div class="container_article">
-        <div class="article_picture">
-            <img class="picture" src="../img/<?php echo $article['picture']?>" alt="img">
+?>
 
+<div class="c0-articles" style="background-image: url('<?php echo "img/".$article['picture']?>')">
+</div>
+
+    <div class="c1-articles">
+        <a href="index.php?controller=article&action=home_article&id=<?php echo utf8_encode($article['id_article']) ?>"><?php echo utf8_encode($article['title']) ?></a>
+        <div class="c2-articles"><?php echo substr($content, 1, 300) . ' ...' ?>
         </div>
-
-            <div class="article_content">
-                <div class="article_title"><a href="LaMineDuNainBlanc.php?controller=article&action=home_article&id=<?php echo $article['id']?>"><?php echo utf8_encode($article['title'])?></a>
-                </div>
-                 <p></p>
-                <div class="article_text">
-                    <?php echo substr($content,1,255) .' ...' ?>
-                </div>
-                </div>
-        </div>
-<?php } ?>
-</body>
+    </div>
 
 
+
+    <?php
+}
+?>
+
+</div>
+
+</html>

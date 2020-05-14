@@ -1,22 +1,41 @@
-<?php foreach ($row as $result) { ?>
+<?php foreach ($row as $result) {
 
-    <form action="../../public/LaMineDuNainBlanc.php?controller=article&action=up_article" method="post">
-    <label for="update_title"></label>
-
-    <input type="text" name="update_author" required value="<?php echo $result['author'] ?>">
-
-    <input type="hidden" name="update_article_id" value="<?php echo $result['id'] ?>">
-
-    <input type="text" name="update_title" value="<?php echo $result['title'] ?>">
-
-    <textarea name="update_content"><?php echo $result['content'] ?></textarea>
-
-    <p>Choisissez une photo.</p>
-    <input type="hidden" name="MAX_FILE_SIZE" value="2097152">
-    <input type="file" name="photo"
+?>
+<div>
+    <div class="container-bouton"><a href="index.php?controller=article&action=admin_article">Retour</a></div>
+</div>
 
 
-    <button type="submit" name="update_article">Update</button>
+
+<div class="container-titre">
+    Mise à jour d'un article
+</div>
+
+<div id="bande"></div>
 
 
+<div id="container-input">
+
+    <form action="index.php?controller=article&action=request_upgrade_article" enctype="multipart/form-data" method="post">
+
+        <input type="hidden" name="update_article_id" value="<?php echo $result['id_article'] ?>">
+
+        <p>Votre titre</p>
+        <input type="text" name="update_title" value="<?php echo $result['title']?>">
+
+
+        <p>Votre article</p>
+        <textarea name="update_content"
+                  placeholder="Ecrivez votre texte ici"><?php echo $result['content'] ?>
+        </textarea>
 <?php } ?>
+
+        <p>Choisissez une photo.</p>
+        <input type="hidden" name="MAX_FILE_SIZE" value="2097152">
+        <input type="file" name="photo_update">
+
+        <button type="submit" name="update_article">Update</button>
+
+    </form>
+</div>
+

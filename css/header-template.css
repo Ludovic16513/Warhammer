@@ -1,0 +1,95 @@
+/* Le Container de la bannière (header) */
+.container-header {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    display: grid;
+    grid-template-columns: 40% 60% ;
+    grid-template-rows: repeat(2, auto);
+    background-image: url("../img/snow_fantasy_landscape_by_jjpeabody_d8fcuyk-fullview.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.c0-header{
+    background-image: url("../img/mon_256.png");
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position: right;
+    height: 150px;
+}
+
+
+/* Le Container de la barre de navigation */
+
+
+
+
+.c0-nav{
+    grid-area: gt;
+}
+
+.c1-nav{
+grid-area: tr;
+}
+
+.c2-nav{
+grid-area: ar;
+}
+
+.c3-nav{
+grid-area: co;
+}
+
+
+
+.container-nav {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    display: grid;
+    background-color: black;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-areas:
+            ". . .  gt tr ar co  . . .";
+}
+
+
+
+.c1-header{
+    font-size: 35px;
+    align-self: center;
+}
+
+
+
+
+body{
+    margin: 0;
+}
+
+@media screen and (max-width: 450px) {
+
+    .container-header {
+        height: 75px;
+
+    }
+    .container-nav {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+                "gt tr ar co";
+        font-size: 13px;
+        place-items: center;
+    }
+
+    .c1-header{
+        background-position: center;
+        font-size: 22px;
+        background-size: 50px;
+    }
+
+    .c0-header{
+        background-size: 60px;
+        height: 80px;
+        background-position: center;
+    }
+
+}

@@ -6,6 +6,7 @@ $controller = $_REQUEST['controller'];
 $action = $_REQUEST['action'];
 
 // on inclu le header connecté ou non connecté, si l'utilisateur est connecté ou non.
+session_start();
 
 if (!isset($_SESSION['user']))
 {
@@ -15,12 +16,12 @@ else {
     include "header_connected.php";
 }
 
+
 //un switch qui appellera le bon controller en fonction des variables.
 switch ($controller) {
     case"user":
 
-        require "../model/User.php";
-        require "../controller/UserController.php";
+        require "controller/UserController.php";
 
         $ctrl = new UserController();
 
@@ -41,21 +42,27 @@ switch ($controller) {
                 $ctrl->check_login_admin();
                 break;
 
-            case "home_update_user";
+            case "update_user";
                 $ctrl->home_update_user();
+                break;
+
+            case"request_update_user":
+                $ctrl->update_user();
                 break;
 
             case"crt_user":
                 $ctrl->create_user();
                 break;
 
+            case"admin_create_user":
+                $ctrl->admin_create_user();
+                break;
+
+
             case"del_user":
                 $ctrl->delete_user();
                 break;
 
-            case"up_user":
-                $ctrl->update_user();
-                break;
 
             case"home_user":
                 $ctrl->home_user();
@@ -65,8 +72,9 @@ switch ($controller) {
                 $ctrl->home_admin();
                 break;
 
-            case"home_admin_member":
-                $ctrl->home_member_admin();
+
+            case"user_disconnect":
+                $ctrl->user_disconnect();
                 break;
         }
 
@@ -77,17 +85,30 @@ switch ($controller) {
 switch ($controller) {
     case"article":
 
-        require "../model/User.php";
-        require "../model/article.php";
-        require "../controller/ArticleController.php";
+        require "controller/ArticleController.php";
 
         $ctrl = new ArticleController();
 
+
         switch ($action) {
-            case"create_article":
-                $ctrl->home_create_article();
+            case"admin_article":
+                $ctrl->admin_articles();
                 break;
         }
+
+
+        switch ($action) {
+            case"admin_create_article":
+                $ctrl->admin_create_article();
+                break;
+        }
+
+        switch ($action) {
+            case"request_create_article":
+                $ctrl->create_article();
+                break;
+        }
+
 
         switch ($action) {
             case"request_create_article":
@@ -119,6 +140,39 @@ switch ($controller) {
                 break;
         }
 
+        switch ($action) {
+            case"request_upgrade_article":
+                $ctrl->update_article_admin();
+                break;
+        }
+
+        break;
+}
+
+switch ($controller) {
+
+    case"sheet":
+        require "controller/SheetController.php";
+        $ctrl = new SheetController();
+
+
+        switch ($action) {
+            case"select_sheets":
+                $ctrl->select_sheets();
+                break;
+        }
+
+
+        switch ($action) {
+            case"add_sheet":
+                $ctrl->create_sheet();
+                break;
+        }
+        switch ($action) {
+            case"delete_sheet":
+                $ctrl->delete_sheet();
+                break;
+        }
 
         break;
 }
