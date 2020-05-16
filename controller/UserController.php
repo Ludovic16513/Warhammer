@@ -1,7 +1,6 @@
 <?php
 require_once 'model/User.php';
 
-
 /**
  * Class UserController
  */
@@ -16,6 +15,7 @@ class UserController
     public function __construct()
     {
         $this->user = new User(new db);
+
     }
 
     /**
@@ -28,7 +28,7 @@ class UserController
         // Lance la méthode puis redirection vers la page de login.
         $this->user->disconnect();
         $_SESSION['message'] = 'Vous avez été deconnecté';
-        include 'view/login/login_user.php';
+        header("Location: index.php?controller=user&action=user_login");
 }
 
     public function delete_user()
@@ -94,7 +94,7 @@ class UserController
             $this->user->escape_string($session);
             $this->user->read_one_login_user($session);
             $row = $this->user->getRow();
-            include 'view/login/Home_user.php';
+            header("Location: index.php?controller=sheet&action=select_sheets");
 
         } else { // Redirection si echec de connexion
             include 'view/login/login_user.php';
@@ -191,7 +191,7 @@ class UserController
 
             if (!$auth) { // Connexion refusé -> redirection login
                 $_SESSION['message'] = 'UTILISATEUR ou PASSWORD incorrect';
-                include 'view/login/login_user.php';
+                include 'view/login/login_admin.php';
             }
             else { // Connexion autorisé -> redirection espace admin
                 $this->user->read_all_user();
@@ -200,11 +200,6 @@ class UserController
                 $_SESSION['admin'] = $username;
                 include 'view/login/Home_admin.php';
             }
-        }
-
-        else { // Redirection si echec de connexion
-            $_SESSION['message'] = 'Veuillez vous connecter';
-            include 'view/login/login_admin.php';
         }
     }
 
@@ -248,15 +243,10 @@ class UserController
             $this->user->escape_string($pass);
             $this->user->escape_string($email);
 
-            $this->user->create_login($username, $pass, $email);
+            $request = $this->user->create_login($username, $pass, $email);
+                include 'view/login/login_user.php';
 
-            $_SESSION['message'] = 'Utilisateur ajouté';
-            include 'view/login/login_user.php';
-        }
 
-        else{
-            $_SESSION['message'] = 'Requête refusé';
-            include 'view/login/login_user.php';
         }
     }
 

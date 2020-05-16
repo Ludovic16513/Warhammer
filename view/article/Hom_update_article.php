@@ -1,5 +1,4 @@
 <?php foreach ($row as $result) {
-
 ?>
 <div>
     <div class="container-bouton"><a href="index.php?controller=article&action=admin_article">Retour</a></div>
@@ -18,15 +17,15 @@
 
     <form action="index.php?controller=article&action=request_upgrade_article" enctype="multipart/form-data" method="post">
 
-        <input type="hidden" name="update_article_id" value="<?php echo $result['id_article'] ?>">
+        <input type="hidden" name="update_article_id" required value="<?php echo $result['id_article'] ?>">
 
         <p>Votre titre</p>
-        <input type="text" name="update_title" value="<?php echo $result['title']?>">
+        <input type="text" name="update_title" required maxlength="50" value="<?php echo $result['title']?>">
 
 
         <p>Votre article</p>
         <textarea name="update_content"
-                  placeholder="Ecrivez votre texte ici"><?php echo $result['content'] ?>
+           maxlength="1000"  required placeholder="Ecrivez votre texte ici"><?php echo $result['content'] ?>
         </textarea>
 <?php } ?>
 

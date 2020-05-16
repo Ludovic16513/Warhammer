@@ -21,15 +21,15 @@
 
         <p>L'auteur</p>
 
-        <input type="text" name="create_author" required value="">
+        <input type="text" pattern = "[a-zA-Z0-9]+" maxlength="20" name="create_author" required>
 
 
         <p> Votre titre</p>
-        <input type="text" name="create_title" required value="">
+        <input type="text" pattern = "[A-Za-z\s?]+\" maxlength="50" name="create_title" required>
 
 
         <p>Votre article</p>
-        <textarea required name="create_content"
+        <textarea maxlength="1000" required name="create_content"
                   placeholder="Ecrivez votre texte ici">
         </textarea>
 

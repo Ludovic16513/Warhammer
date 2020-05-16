@@ -1,4 +1,6 @@
 
+<body>
+
 <div>
     <?php if (isset($_SESSION['message'])){
         echo ($_SESSION['message']);
@@ -13,7 +15,6 @@
 
 
 <div class="inscription_admin">
-
         <form action="index.php?controller=user&action=crt_user" method="post">
             <p>Pseudo<p>
             <input class="post" type="text" name="POST_CreateUser" required placeholder="Louis1651" maxlength="20" pattern = "^[A-Za-z0-9_]{1,15}$">
@@ -28,3 +29,4 @@
             <button type="submit" name="create">Inscription</button>
         </form>
     </div>
+</body>

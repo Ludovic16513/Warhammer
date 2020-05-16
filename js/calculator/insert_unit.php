@@ -18,7 +18,7 @@ try { //Test erreur.
 
     /* Requête bd avec jointure de la table associative,
      * permet d'obtenir : unité -> armure. */
-    $sql = "INSERT INTO sheetcontent (id_sheet, weapon, armor, unit, cost, amount) VALUES ('$id','$armor','$weapon','$unit','$cost','$amount');";
+    $sql = "INSERT INTO sheetcontent (id_sheet, weapon, armor, unit, cost, amount) VALUES ('$id','$weapon','$armor','$unit','$cost','$amount');";
 
     $result = $db->query($sql); //Lancement de la requête bd.
 

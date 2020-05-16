@@ -25,12 +25,24 @@ class sheet
     INNER JOIN
     `sheet` ON sheet.id_user = user.id
     WHERE user.name = '$session'";
-
         $query = $this->mysqli->query($sql);
-        while ($row = $query->fetch_assoc()) {
-            $this->row[] = $row;
+
+        if ($query->num_rows === 0)
+        {
+            $sql = "SELECT * FROM user WHERE name = '$session'";
+            $query = $this->mysqli->query($sql);
+
+            while ($row = $query->fetch_assoc()) {
+             $this->insert_sheet($row['id']);
+             $this->select_sheets($session);
+            }
         }
-        return $sql;
+        else{
+            while ($row = $query->fetch_assoc()) {
+
+                $this->row[] = $row;
+            }
+        }
     }
 
 
@@ -39,19 +51,43 @@ class sheet
      */
     public function delete_sheet($id)
     {
-        $sql = "DELETE FROM `sheet` WHERE id = '$id'";
-        $this->mysqli->query($sql);
+
+        if (!($stmt = $this->mysqli->prepare("DELETE FROM `sheet` WHERE id_sheet_prim = ?"))) {
+            $_SESSION['message'] = "Echec lors de la préparation : (" . $this->mysqli->errno . ") " . $this->mysqli->error;
+        }
+
+        /* Requête préparée, étape 2 : lie les valeurs et exécute la requête */
+        if (!$stmt->bind_param("i", $id)) {
+            $_SESSION['message'] = "Echec lors du liage des paramètres : (" . $stmt->errno . ") " . $stmt->error;
+        }
+
+        if (!$stmt->execute()) {
+            $_SESSION['message'] = "Echec lors de l'exécution de la requête : (" . $stmt->errno . ") " . $stmt->error;
+        }
+
+
     }
+
 
     public function insert_sheet($id_user)
     {
-        $sql = "INSERT INTO sheet (`id_user`) VALUES ('$id_user')";
-        $this->mysqli->query($sql);
-    }
+        if (!($stmt = $this->mysqli->prepare("INSERT INTO sheet(id_user) VALUES (?)"))) {
+            $_SESSION['message'] = "Echec lors de la préparation : (" . $this->mysqli->errno . ") " . $this->mysqli->error;
+        }
 
+        /* Requête préparée, étape 2 : lie les valeurs et exécute la requête */
+        if (!$stmt->bind_param("i", $id_user)) {
+            $_SESSION['message'] = "Echec lors du liage des paramètres : (" . $stmt->errno . ") " . $stmt->error;
+        }
+
+        if (!$stmt->execute()) {
+            $_SESSION['message'] = "Echec lors de l'exécution de la requête : (" . $stmt->errno . ") " . $stmt->error;
+        }
+    }
 
     public function escape_string($value)
     {
+
         return $this->mysqli->real_escape_string($value);
     }
 

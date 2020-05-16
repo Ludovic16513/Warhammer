@@ -124,8 +124,8 @@ switch ($controller) {
                 $ctrl->update_article_admin();
                 break;
 
-                break;
         }
+        break;
 }
 
 switch ($controller) {
@@ -150,9 +150,8 @@ switch ($controller) {
                 $ctrl->delete_sheet();
                 break;
 
-                break;
         }
-
+        break;
 }
 include 'footer.php';
 

@@ -2,13 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="604359eb-c185-4bfd-9734-6aff738fe6f6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/css/calculator.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/captcha.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ArticleController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/SheetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/SheetController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/admin_template.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin_template.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/articles_templates.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/articles_templates.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/footer_template.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/footer_template.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/header-template.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/header-template.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/user_template.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/user_template.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header_connected.php" beforeDir="false" afterPath="$PROJECT_DIR$/header_connected.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header_disconnected.php" beforeDir="false" afterPath="$PROJECT_DIR$/header_disconnected.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/calculator/calculator.php" beforeDir="false" afterPath="$PROJECT_DIR$/js/calculator/calculator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/calculator/insert_unit.php" beforeDir="false" afterPath="$PROJECT_DIR$/js/calculator/insert_unit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sheet.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/sheet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/article/Hom_update_article.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/article/Hom_update_article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/article/Home_create_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/article/Home_create_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/article/home_article_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/article/home_article_admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/article/home_articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/article/home_articles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/login/Home_user.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/login/Home_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login/Home_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/login/Home_admin_create_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login/Home_admin_create_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/login/Home_update_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login/Home_update_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/login/login_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login/login_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/login/login_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login/login_user.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/sheet/user_sheet.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/sheet/user_sheet.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +58,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -193,7 +215,10 @@
       <workItem from="1589335418026" duration="7594000" />
       <workItem from="1589343170845" duration="29873000" />
       <workItem from="1589416985850" duration="849000" />
-      <workItem from="1589430481929" duration="19652000" />
+      <workItem from="1589430481929" duration="56061000" />
+      <workItem from="1589533111558" duration="158000" />
+      <workItem from="1589533279762" duration="6573000" />
+      <workItem from="1589558595528" duration="40213000" />
     </task>
     <task id="LOCAL-00001" summary="Doublon ok">
       <created>1587817531880</created>
@@ -237,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589437377422</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Faire le reponsive">
+      <created>1589453289665</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1589453289665</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,10 +304,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="376" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588303282964" />
-    <state x="588" y="114" key="CommitChangelistDialog2" timestamp="1589437376163">
+    <state x="588" y="114" key="CommitChangelistDialog2" timestamp="1589453288989">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="588" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589437376163" />
+    <state x="588" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589453288989" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1588646072223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -320,10 +352,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="122" y="151" width="1736" height="856" maximized="true" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588646072223" />
-    <state x="-179" y="48" width="1736" height="890" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589410390274">
+    <state x="-179" y="48" width="1736" height="890" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589605390213">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-179" y="48" width="1736" height="890" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589410390274" />
+    <state x="-179" y="48" width="1736" height="890" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589605390213" />
     <state x="654" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1589343203430">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

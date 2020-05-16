@@ -6,7 +6,7 @@ class SheetController
 {
 
     private $sheet;
-
+    private $user;
     /**
      * SheetController constructor.
      */
@@ -21,10 +21,14 @@ class SheetController
     public function select_sheets()
     {
         if (isset($_SESSION['user'])) {
+
             $session = $_SESSION['user'];
+
             $this->sheet->escape_string($session);
+
             $this->sheet->select_sheets($session);
             $row = $this->sheet->getRow();
+
             include 'view/sheet/user_sheet.php';
         } else {
             $_SESSION['message'] = 'Veuillez vous connecter';
@@ -39,10 +43,9 @@ class SheetController
     {
         // <---- REQUETE DE CREATION D 'UNE FEUILLE ---->
 
-        $id_user = $this->sheet->escape_string($_GET['id_user']);
+        $id_user = $this->sheet->escape_string($_GET['id']);
 
         $this->sheet->insert_sheet($id_user);
-
 
         $_SESSION['message'] = 'Feuille ajouté';
 

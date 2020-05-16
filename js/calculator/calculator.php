@@ -3,8 +3,6 @@ session_start();
 
 if (isset($_SESSION['user'])) { // Test si l'utiliseur connecté
 
-try { //Test erreur.
-
     /* Connexion via le fichier bd.
     * new mysqli */
     include 'db.php';
@@ -18,16 +16,11 @@ try { //Test erreur.
     $sql = "SELECT *
     FROM sheetcontent
     INNER JOIN sheet 
-    ON sheetcontent.id_sheet = sheet.id
-    WHERE sheet.id = $id";
-
+    ON sheetcontent.id_sheet = sheet.id_sheet_prim
+    WHERE sheet.id_sheet_prim = $id";
     $result = $db->query($sql); //Lancement de la requête bd.
-
-} catch (Exception $e) { // Gestion des erreurs
-    echo $e;
-}
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -35,19 +28,26 @@ try { //Test erreur.
 <head>
     <meta charset="utf-8">
     <title>La mine du nain blanc</title>
+    <link rel="stylesheet" href="../../css/calculator.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body class="calculator">
+
     <!-- Header -->
     <div class="container-title_sheet">
-        <div class="back-sheets"><a href="../../index.php?controller=sheet&action=select_sheets">Retour</a></div>
-        <div class="title-sheet"></div>
-        <div id="total-sheet"></div>
+        <span class="back-sheets">
+            <a href="../../index.php?controller=sheet&action=select_sheets">Retour</a>
+        </span>
+        <span class="title">
+            <!-- TO DO -->
+        </span>
     </div>
 
-    <form action="" method="post">
-        <input id="input_id" type="hidden" name="id" value="<?php echo $id; ?>">
-    </form>
+    <div class="total">
+        <label for="total_army">Total :</label>
+        <input id="total_army" type="number">
+    </div>
 
     <!-- DEBUT: Calculateur -->
     <div class="calculator_container">
@@ -67,45 +67,86 @@ try { //Test erreur.
                 <option name="Tueurs-de-troll" value="Tueurs-de-troll">Tueurs-de-troll</option>
                 <option name="Arquebusiers" value="Arquebusiers">Arquebusiers</option>
             </select>
-            <input id="input_unit_cost" class="add" type="number" disabled>
+            <input id="input_unit_cost" class="add" type="hidden" disabled>
             <!-- Selecteur d'arme -->
             <select id="select_weapon" name="select_weapon"></select>
-            <input id="input_weapon_cost" class="add" type="number" disabled>
+            <input id="input_weapon_cost" class="add" type="hidden" disabled>
             <!-- Selecteur d'armure -->
             <select id="select_armor" name="select_armor"></select>
-            <input id="input_armor_cost" class="add" type="number" disabled>
+            <input id="input_armor_cost" class="add" type="hidden" disabled>
             <!-- Selecteur de nombre d'unités -->
-            <label for="input_unit_multiply">Entrez le nombre d'unité souhaitée</label>
+            <p>Entrez le nombre d'unité souhaitée</p>
             <input id="input_unit_multiply" type="number" value="1">
             <input id="input_calculator" type="number" disabled>
-
             <button id="add_button">Ajouter</button>
+
         </div>
+    </div>
+
 
         <!-- Liste d'armée -->
         <div id="army_list">
             <?php while($row = $result->fetch_assoc()) {?>
-                <div class="container_unit">
                     <div class="unit">
                         <input id="unit_id" type="hidden" value="<?php echo $row['id_content'];?>">
-                        <div><?php echo $row['unit']; ?></div>
-                        <div><?php echo $row['weapon']; ?></div>
-                        <div><?php echo $row['armor']; ?></div>
-                        <div><?php echo $row['amount']; ?></div>
-                        <input class="total" value="<?php echo $row['cost']; ?>"/>
-                        <a href="#" class="remove_unit">Delete</a>
-                    </div>
-                </div>
-            <?php }?>
-        </div>
+                        <div class="container_unit">
 
+                        <div class="number_unit"><?php echo $row['amount']; ?></div>
+                        <div class="name_unit"><?php echo $row['unit'];?></div>
+                        <div class="pts"> <?php echo $row['cost']; ?> pts</div>
+
+
+
+                            <input class="total" type="hidden" value="<?php echo $row['cost']; ?>">
+                        </div>
+
+                        <div class="container_letter">
+                            <div class="empty"></div>
+                            <div class="M">M</div>
+                            <div class="CC">CC</div>
+                            <div class="F">F</div>
+                            <div class="E">E</div>
+                            <div class="PV">PV</div>
+                            <div class="I">I</div>
+                            <div class="A">A</div>
+                            <div class="CD">CD</div>
+                        </div>
+
+                        <div class="container_crt">
+                            <div><?php echo $row['unit'];?></div>
+                            <div class="c1">3</div>
+                            <div class="c2">4</div>
+                            <div class="c3">4</div>
+                            <div class="c4">4</div>
+                            <div class="c5">1</div>
+                            <div class="c6">4</div>
+                            <div class="c7">2</div>
+                            <div class="c8">9</div>
+                        </div>
+
+                        <div class="container_weapon">
+                        <div class="armes">Equipement: <?php echo $row['weapon']?>, <?php echo $row['armor']; ?></div>
+                        </div>
+                        <div class="container_options">
+                            <div class="options">Options: musicien, étendard, chef</div>
+                        </div>
+                        <div class="container_object">
+                            <div class="object">Objets:</div>
+                        </div>
+                         <a href="#" class="remove_unit">Delete</a>
+                </div>
+                <div class="title-sheet"></div>
+                <div id="total-sheet"> </div>
+            <?php }}?>
+        </div>
         <!-- Total -->
-        <label for="total_army">Total :</label>
-        <input id="total_army" type="number">
     </div>
     <!-- FIN: Calculateur -->
-    <?php }?>
+    <form action="" method="post">
+        <input id="input_id" type="hidden" name="id" value="<?php echo $id; ?>">
+    </form>
 </body>
+
 
 <!-- Post-Chargement des scripts pour éviter de ralentir l'affiche de la page -->
 <script src="../jquery-3.5.1.js"></script>

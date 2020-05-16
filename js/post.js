@@ -59,20 +59,51 @@ function insert_unit() {
         type: 'POST',
         data: data,
         dataType: 'json',
-        // dataType: 'html',
         success:(function (data_id){
-            $('#army_list').append(
-                `<div class="unit">
-                    <input id="unit_id" type="hidden" value="${data_id}">
-                    <div>${selected_unit}</div>
-                    <div>${selected_weapon}</div>
-                    <div>${selected_armor}</div>
-                    <div>${amount}</div>
-                    <input class="total" value="${cost}"> 
-                    <label for="">id</label>
-                    <a class="remove_unit">Delete</a>
-                </div>`
-            );
+            $('#army_list').append
+            (`<div class="unit">
+                <input id="unit_id" type="hidden" value="${data_id}">
+                <div class="container_unit">
+                <div class="number_unit">${amount}</div>
+            <div class="name_unit">${selected_unit}</div>
+            <div class="pts"> ${cost} pts</div>
+            <input class="total" type="hidden" value="${cost}">
+            </div>
+            <div class="container_letter">
+                <div class="empty"></div>
+                <div class="M">M</div>
+                <div class="CC">CC</div>
+                <div class="F">F</div>
+                <div class="E">E</div>
+                <div class="PV">PV</div>
+                <div class="I">I</div>
+                <div class="A">A</div>
+                <div class="CD">CD</div>
+                </div>
+                
+                <div class="container_crt">
+            <div class="c1">3</div>
+                <div class="c2">4</div>
+                <div class="c3">4</div>
+                <div class="c4">4</div>
+                <div class="c5">1</div>
+                <div class="c6">4</div>
+                <div class="c7">2</div>
+                <div class="c8">9</div>
+                </div>
+                
+                <div class="container_weapon">
+                <div class="armes">Equipement: ${selected_weapon}, ${selected_armor}</div>
+            </div>
+            <div class="container_options">
+                <div class="options">Options: musicien, étendard, chef</div>
+            </div>
+            <div class="container_object">
+                <div class="object">Objets:</div>
+            </div>
+            <a class="remove_unit">Delete</a>
+                </div>`);
+
             refresh_delete_links();
             refresh_total_cost();
             refresh_army_cost();

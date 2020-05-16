@@ -58,7 +58,7 @@ class ArticleController
                         break;
                     case 4:
                         $_SESSION['message'] = "La taille du fichier que vous avez envoyé est nulle.";
-                        include 'view/article/Home_create_admin.php';
+                        include 'view/article/home_article_admin.php';
                         break;
                 }
             }
@@ -81,7 +81,7 @@ class ArticleController
                     */
                     $this->article->create_article_admin($title, $content, $picture, $author);
                     $_SESSION['message'] = "Votre article a été créé avec succès";
-                    include 'view/article/home_articles.php';
+                    $this->admin_articles();
 
                 }
             }
@@ -257,6 +257,7 @@ class ArticleController
                      * puis redirection vers la page de création d'article avec un gentil message :)
                     */
                     $this->article->update_article_admin($title,$content,$picture,$id);
+
                     $_SESSION['message'] = "Votre article a été mis à jour avec succès";
                     $this->admin_articles();
                 }

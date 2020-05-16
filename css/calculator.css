@@ -1,0 +1,163 @@
+.unit{
+    border: 1px solid black;
+    width: 400px;
+    height: 300px;
+    margin-top: 5%;
+}
+
+
+html{
+    font-family: 'Lato', sans-serif;
+}
+
+.container_title-sheet {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.calculator{
+    margin-left: 20%;
+    margin-right: 20%;
+    background-image: url("../img/home_userjpg.jpg");
+    background-size: cover;
+}
+
+.calculator_container{
+    display: grid;
+    justify-content: center;
+
+}
+
+
+#army_list{
+    margin-top: 5%;
+    display: grid;
+    border: black solid 1px;
+    justify-content: center;
+    background-color: rgba(255, 246, 255, 0.8);
+}
+
+.container_unit{
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr;
+    margin: 10px;
+
+}
+
+
+.container_letter{
+    display: grid;
+    grid-template-columns: 40% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 10px;
+}
+
+.container_crt{
+    display: grid;
+    place-items: baseline;
+    grid-template-columns: 40% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 10px;
+    border: black solid 1px;
+}
+
+.container_weapon{
+    display: grid;
+    grid-template-columns: 1fr ;
+    margin: 10px;
+}
+
+.container_object{
+    display: grid;
+    grid-template-columns: 1fr ;
+    margin: 10px;
+}
+
+.container_options{
+    display: grid;
+    grid-template-columns: 1fr ;
+    margin: 10px;
+}
+
+.container-delete-unit{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.pts{
+justify-self: end;
+    margin-right: 10px;
+}
+
+.number_unit{
+
+}
+
+.name_unit{
+
+}
+
+.c2, .c5, .c8{
+    padding-left: 5px;
+}
+
+
+.F, .M, .E, .I, .A{
+
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+.unit{
+    margin-bottom: 5%;
+}
+
+
+.total{
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 2%;
+}
+
+
+@media screen and (max-width: 450px) {
+
+    .calculator {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .unit{
+        width: 350px;
+        height: 230px;
+    }
+
+    #select_armor{
+        height: 35%;
+        width: 30%;
+    }
+
+    #select_unit{
+        height: 35%;
+        width: 30%;
+    }
+
+    #select_weapon{
+        height: 35%;
+        width: 30%;
+    }
+
+
+
+    .total{
+        font-size: 30px;
+    }
+
+    .title{
+        font-size: 25px;
+    }
+
+}

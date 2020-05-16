@@ -1,3 +1,4 @@
+
 <body>
 <div>
     <?php if (isset($_SESSION['message'])){
@@ -5,8 +6,6 @@
         unset($_SESSION['message']);
     } ?>
 </div>
-
-
 <div class="container-menu">
     <div class="c0-menu"><a href="index.php?controller=article&action=admin_article">Gestion des Articles</a></div>
 </div>
@@ -25,12 +24,12 @@
 
 
 <div class="container-c0">
-    <div class="c0"></div>
+    <div></div>
     <?php
-    foreach ($row as $result) {
-        $timestamp = strtotime($result['date']);?>
+    foreach ($row as $result) {;
+        $timestamp = strtotime($result['date_joined']);?>
         <div class="c1"><a href="index.php?controller=user&action=update_user&id=<?php echo $result['id']?>"><?php echo utf8_encode($result['name'])?></a></div>
-        <div class="c2"><?php echo date("d-m-Y H:i", $timestamp)?></div>
+        <div class="c2"><?php echo date("d-m-Y", $timestamp)?></div>
         <div class="c3"><a class="a-delete" href="index.php?controller=user&action=del_user&id=<?php echo $result['id']?>"></a></div>
         <div class="c4"></div>
     <?php } ?>

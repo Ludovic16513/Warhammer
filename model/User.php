@@ -58,8 +58,6 @@ class User
         }
     }
 
-
-
     /**
      * @return bool
      */
@@ -79,7 +77,7 @@ class User
         while ($row = $query->fetch_assoc()) {
             $this->row[] = $row;
         }
-        return $sql;
+        return Null;
     }
 
     /**
@@ -149,23 +147,38 @@ class User
         $query = $this->mysqli->query($sql);
 
         if ($query->num_rows === 0) {
-            // on prepare la requête en indiquant les lignes à insérer.
-            if (!($stmt = $this->mysqli->prepare('INSERT INTO user(name, password, email) VALUES (?,?,?)'))) {
-                return $_SESSION['Message'] = "Echec de la préparation : (" . $this->mysqli->errno . ") " . $this->mysqli->error;
+
+            $sql = "SELECT * FROM user WHERE email = '$email'";
+            $query = $this->mysqli->query($sql);
+
+            if ($query->num_rows === 0) {
+
+                // on prepare la requête en indiquant les lignes à insérer.
+                if (!($stmt = $this->mysqli->prepare('INSERT INTO user(name, password, email) VALUES (?,?,?)'))) {
+                    return $_SESSION['message'] = "Echec de la préparation : (" . $this->mysqli->errno . ") " . $this->mysqli->error;
+                }
+                // on ajoute les valeurs à la préparation et on définit leurs types.
+                if (!$stmt->bind_param("sss", $name, $hash, $email)) {
+                    return $_SESSION['message'] = "Echec lors du liage des paramètres : (" . $stmt->errno . ") " . $stmt->error;
+                }
+                // On execute le la requête.
+                if (!$stmt->execute()) {
+                    return $_SESSION['message'] = "Echec lors de l'exécution : (" . $stmt->errno . ") " . $stmt->error;
+                }
+                else {
+                    return $_SESSION['message'] = 'Inscription validée';
+                }
             }
-            // on ajoute les valeurs à la préparation et on définit leur type.
-            if (!$stmt->bind_param("sss", $name, $hash, $email)) {
-                return $_SESSION['Message'] = "Echec lors du liage des paramètres : (" . $stmt->errno . ") " . $stmt->error;
+            else{
+                $_SESSION['message'] = 'Utilisateur ou Email déjà existant';
             }
-            // On execute le la requête.
-            if (!$stmt->execute()) {
-                return $_SESSION['Message'] = "Echec lors de l'exécution : (" . $stmt->errno . ") " . $stmt->error;
-            }
-        } else {
-            echo $_SESSION['Message'] = 'Utilisateur ou email déjà existant';
         }
-        return $sql;
+        else{
+           $_SESSION['message'] = 'Utilisateur ou Email déjà existant';
+        }
+        return null;
     }
+
 
     /**
      * @param $name
@@ -186,10 +199,10 @@ class User
         $stmt->execute();
 
         if ($stmt->error) {
-           echo  "FAILURE" . $stmt->error;
-        } else echo "Updated {$stmt->affected_rows} rows";
+            $_SESSION['message'] = 'FAILURE';
+        } else
         $stmt->close();
-
+        return null;
     }
 
     /**
@@ -199,7 +212,6 @@ class User
     public function escape_string($value)
     {
         strip_tags($value);
-        htmlentities($value);
         $this->mysqli->real_escape_string($value);
     }
 }

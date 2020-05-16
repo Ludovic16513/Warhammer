@@ -22,10 +22,10 @@
     <form action="index.php?controller=user&action=admin_chklogin" method="post">
 
         <p>Votre pseudo</p>
-        <input type="text" name="username_admin" required placeholder="Pseudo">
+        <input type="text"  pattern="[a-zA-Z0-9]+" name="username_admin" required value="" placeholder="Pseudo">
 
         <p>Votre password</p>
-        <input type="password" name="password_admin" required placeholder="Password">
+        <input type="password"  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" name="password_admin" required value="" placeholder="Password">
 
         <button type="submit" name="login_admin">Connexion</button>
     </form>

@@ -1,5 +1,4 @@
 <?php foreach ($row as $result) {
-
 ?>
 
 <div>
