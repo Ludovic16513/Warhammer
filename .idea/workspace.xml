@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="604359eb-c185-4bfd-9734-6aff738fe6f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/view/login/validation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ArticleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/calculator/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/js/calculator/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/article.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/article/home_articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/article/home_articles.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +189,7 @@
       <workItem from="1589430481929" duration="56061000" />
       <workItem from="1589533111558" duration="158000" />
       <workItem from="1589533279762" duration="6573000" />
-      <workItem from="1589558595528" duration="62745000" />
+      <workItem from="1589558595528" duration="63424000" />
     </task>
     <task id="LOCAL-00001" summary="Doublon ok">
       <created>1587817531880</created>
@@ -256,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589607753838</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Manque responsive tablette &#10;/ incrustation pagination library &#10;/ Captcha&#10;/ commentaire">
+      <created>1589768350024</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1589768350024</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,10 +294,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="376" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588303282964" />
-    <state x="588" y="114" key="CommitChangelistDialog2" timestamp="1589607752369">
+    <state x="588" y="114" key="CommitChangelistDialog2" timestamp="1589768349332">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="588" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589607752369" />
+    <state x="588" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589768349332" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1588646072223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
