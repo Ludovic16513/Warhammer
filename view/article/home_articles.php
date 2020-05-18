@@ -7,6 +7,7 @@
 
 <div class="container-articles">
 <?php
+
 foreach ($row as $article){
 $content = utf8_encode($article['content']);
 ?>
@@ -18,6 +19,7 @@ $content = utf8_encode($article['content']);
         <div class="c2-articles"><?php echo substr($content, 1, 300) . ' ...' ?>
         </div>
     </div>
+
     <?php
 }
 ?>

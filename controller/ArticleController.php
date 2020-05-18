@@ -8,6 +8,7 @@ class ArticleController
 {
     private $article;
 
+
     /**
      * ArticleController constructor.
      */
@@ -136,6 +137,7 @@ class ArticleController
         $row = $this->article->getRow();
         include 'view/article/home_articles.php';
     }
+
 
     /**
      *

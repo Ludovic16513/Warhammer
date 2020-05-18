@@ -119,6 +119,17 @@ class UserController
         }
     }
 
+    public function user_mail_valid(){
+
+        $name = $_GET['name'];
+        $this->user->escape_string($name);
+
+        $key = $_GET['key'];
+        $this->user->escape_string($key);
+
+        $this->user->user_mail_valid($name, $key);
+    }
+
     /**
      *
      */

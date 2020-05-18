@@ -34,7 +34,7 @@ class User
         $sql = "SELECT * FROM user WHERE name = '$username'";
         $query = $this->mysqli->query($sql);
         $row = $query->fetch_assoc();
-        if ($query->num_rows > 0 && password_verify($password, $row['password'])) {
+        if ($query->num_rows > 0 && password_verify($password, $row['password']) && $row['active'] == 1) {
             return $this->row[] = $row;
         } else {
             return false;
@@ -132,6 +132,51 @@ class User
     }
 
 
+    public function user_mail_valid($name,$key){
+
+        if ($stmt = $this->mysqli->prepare("SELECT user_key,active FROM user WHERE name=?")) {
+
+            $stmt->bind_param("s", $name);
+
+            $stmt->execute();
+
+            $result = $stmt->get_result();
+
+            $row = $result->fetch_assoc();
+
+            $user_key = $row['user_key'];
+            $active = $row['active'];
+
+
+
+            if($active == '1') // Si le compte est déjà actif
+            {
+                echo "Votre compte est déjà actif !";
+            }
+            else // Si ce n'est pas le cas
+            {
+                if($key == $user_key) //compare les deux clés
+                {
+
+                    $active = 1;
+                    // Si elles correspondent on active le compte
+                    echo "Votre compte a bien été activé !";
+
+                    // La requête va passer le champ active de 0 à 1
+                    $stmt = $this->mysqli->prepare("UPDATE user SET active=? WHERE name=?");
+                    $stmt->bind_Param('is', $active,$name);
+                    $stmt->execute();
+                }
+                else // Si les deux clés sont différentes
+                {
+                   echo  "Erreur ! Votre compte ne peut être activé...";
+                }
+            }
+        }
+    }
+
+
+
     /**
      * @param $name
      * @param $pass
@@ -140,8 +185,13 @@ class User
      */
     public function create_login($name, $pass, $email)
     {
-        // on crypte le mot de passe
+        //génère une clé
+        $key = md5(microtime(TRUE)*100000);
+
+        // crypte le mot de passe
         $hash = password_hash($pass, PASSWORD_BCRYPT);
+
+
 
         $sql = "SELECT * FROM user WHERE name = '$name'";
         $query = $this->mysqli->query($sql);
@@ -154,11 +204,11 @@ class User
             if ($query->num_rows === 0) {
 
                 // on prepare la requête en indiquant les lignes à insérer.
-                if (!($stmt = $this->mysqli->prepare('INSERT INTO user(name, password, email) VALUES (?,?,?)'))) {
+                if (!($stmt = $this->mysqli->prepare('INSERT INTO user(name, password, email, user_key) VALUES (?,?,?,?)'))) {
                     return $_SESSION['message'] = "Echec de la préparation : (" . $this->mysqli->errno . ") " . $this->mysqli->error;
                 }
                 // on ajoute les valeurs à la préparation et on définit leurs types.
-                if (!$stmt->bind_param("sss", $name, $hash, $email)) {
+                if (!$stmt->bind_param("ssss", $name, $hash, $email, $key)) {
                     return $_SESSION['message'] = "Echec lors du liage des paramètres : (" . $stmt->errno . ") " . $stmt->error;
                 }
                 // On execute le la requête.
@@ -166,7 +216,23 @@ class User
                     return $_SESSION['message'] = "Echec lors de l'exécution : (" . $stmt->errno . ") " . $stmt->error;
                 }
                 else {
-                    return $_SESSION['message'] = 'Inscription validée';
+                    $recipient = $email;
+                    $subject = "Activation de votre compte" ;
+                    $heading = "From: inscription@LamineDuNainBlanc.com" ;
+
+                    $message = 'Bienvenue sur LamineDuNainBlanc
+                    Pour activer votre compte, veuillez cliquer sur le lien ci-dessous
+                    ou copier/coller dans votre navigateur Internet.
+                    http://creationalsite.com/Warhammer/index.php?controller=user&action=user_mail-valid&name='.urlencode($name).'&key='.urlencode($key).'
+          
+                    ---------------
+                    Ceci est un mail automatique, Merci de ne pas y répondre.';
+
+                    ini_set( 'display_errors', 1 );
+
+                    mail($recipient, $subject, $message, $heading);
+
+                    $_SESSION['message'] = 'Inscription validée';
                 }
             }
             else{
@@ -178,7 +244,6 @@ class User
         }
         return null;
     }
-
 
     /**
      * @param $name

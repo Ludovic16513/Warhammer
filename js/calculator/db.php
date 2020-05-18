@@ -1,7 +1,7 @@
 <?php
 
 // connection a la bd
-$db = new mysqli("localhost","u349200383_NainBlanc ","NainBlanc","u349200383_Calculator");
+$db = new mysqli("localhost","u349200383_NainBlanc","NainBlanc","u349200383_Calculator");
 
 // message si erreur de connection.
 if (mysqli_connect_errno()) {

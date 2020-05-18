@@ -1,6 +1,5 @@
 <?php
 include('config/db.php');
-
 class article
 {
     private $mysqli;

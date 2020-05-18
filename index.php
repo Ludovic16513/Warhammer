@@ -1,6 +1,4 @@
 <?php
-?>
-<?php
 //On transmet dans des variables les paramètres action et controller de l'url.
 $controller = $_REQUEST['controller'];
 $action = $_REQUEST['action'];
@@ -75,6 +73,10 @@ switch ($controller) {
 
             case"user_disconnect":
                 $ctrl->user_disconnect();
+                break;
+
+            case"user_mail-valid":
+                $ctrl->user_mail_valid();
                 break;
         }
 
