@@ -4,10 +4,10 @@
 foreach($row as $result) {
     $timestamp = strtotime($result['date']);
     ?>
-    <div class="c0-article"><?php echo utf8_encode($result['title']) ?></div>
+    <div class="c0-article"><?php echo $result['title'] ?></div>
     <div class="c2-article"><?php echo date("d-m-Y H:i", $timestamp); ?></div>
     <div class="c1-article"></div>
-    <div class="c3-article"><?php echo utf8_encode($result['content']);?></div>
+    <div class="c3-article"><?php echo html_entity_decode($result['content']);?></div>
 <?php } ?>
 </div>
 

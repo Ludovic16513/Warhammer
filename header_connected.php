@@ -22,7 +22,7 @@
     <div class="container-nav">
         <div class="c0-nav"><a href="index.php?controller=article&action=home_articles">LE GUET</a></div>
         <div class="c1-nav"><a href="index.php?controller=user&action=home_admin">LE TRÔNE</a></div>
-        <div class="c2-nav">L'ARMURERIE</div>
+        <div class="c2-nav">LE DEDALE</div>
         <div class="c3-nav"><a href="index.php?controller=user&action=home_user"><?php echo $_SESSION['user'] ?></a></div>
     </div>
 

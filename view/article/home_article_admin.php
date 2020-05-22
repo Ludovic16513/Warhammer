@@ -1,9 +1,13 @@
+
 <div class="container-menu">
     <div class="c0-menu"><a href="index.php?controller=user&action=home_admin">Gestion Membres</a></div>
 </div>
-
-
-
+<div>
+    <?php if (isset($_SESSION['message'])){
+        echo ($_SESSION['message']);
+        unset($_SESSION['message']);
+    } ?>
+</div>
 <div class="container-title">
     <div class="c0-title">GESTION DES ARTICLES</div>
 </div>

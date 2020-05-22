@@ -82,7 +82,7 @@ function insert_unit() {
                 </div>
                 
                 <div class="container_crt">
-            <div class="c1">3</div>
+            <div class="c1">${selected_unit}</div>
                 <div class="c2">4</div>
                 <div class="c3">4</div>
                 <div class="c4">4</div>

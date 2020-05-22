@@ -126,6 +126,7 @@ a{
 
 
 .c3-article{
+    white-space: pre-wrap; /* afficher les espaces */
     margin-bottom: 2%;
     margin-top: 2%;
     grid-column-start: 3;

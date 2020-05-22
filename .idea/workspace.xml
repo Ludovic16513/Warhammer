@@ -2,14 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="604359eb-c185-4bfd-9734-6aff738fe6f6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/menu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/SheetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/SheetController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/articles_templates.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/articles_templates.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/input_template.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/input_template.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header_connected.php" beforeDir="false" afterPath="$PROJECT_DIR$/header_connected.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header_disconnected.php" beforeDir="false" afterPath="$PROJECT_DIR$/header_disconnected.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/calculator/calculator.php" beforeDir="false" afterPath="$PROJECT_DIR$/js/calculator/calculator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/calculator/unit_value.php" beforeDir="false" afterPath="$PROJECT_DIR$/js/calculator/unit_value.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/captcha.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/article.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sheet.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/sheet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/article/Hom_update_article.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/article/Hom_update_article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/article/Home_create_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/article/Home_create_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/article/home_article.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/article/home_article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/article/home_article_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/article/home_article_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/article/home_articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/article/home_articles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/login/login_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login/login_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/sheet/user_sheet.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/sheet/user_sheet.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="DatabaseView">
@@ -49,7 +76,13 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/view/sheet" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -190,6 +223,17 @@
       <workItem from="1589533111558" duration="158000" />
       <workItem from="1589533279762" duration="6573000" />
       <workItem from="1589558595528" duration="63424000" />
+      <workItem from="1589781825276" duration="3430000" />
+      <workItem from="1589800982205" duration="17144000" />
+      <workItem from="1589868004738" duration="40181000" />
+      <workItem from="1589961772529" duration="1179000" />
+      <workItem from="1590019976735" duration="871000" />
+      <workItem from="1590034048449" duration="5804000" />
+      <workItem from="1590047504186" duration="28454000" />
+      <workItem from="1590089638601" duration="5364000" />
+      <workItem from="1590095140695" duration="1089000" />
+      <workItem from="1590097924515" duration="62000" />
+      <workItem from="1590124135188" duration="20965000" />
     </task>
     <task id="LOCAL-00001" summary="Doublon ok">
       <created>1587817531880</created>
@@ -254,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589768350024</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Manque responsive tablette &#10;/ incrustation pagination library &#10;/ Captcha&#10;/ commentaire">
+      <created>1589781899959</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1589781899959</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,10 +321,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="Manque responsive tablette &#10;/ incrustation pagination library &#10;/ Captcha&#10;/ commentaire" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="603" y="205" key="#Deployment" timestamp="1589683401229">
+    <state x="603" y="205" key="#Deployment" timestamp="1590047589255">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="603" y="205" key="#Deployment/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589683401229" />
+    <state x="603" y="205" key="#Deployment/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590047589255" />
+    <state x="952" y="205" key="#Inspections" timestamp="1590089695260">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="952" y="205" key="#Inspections/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590089695260" />
     <state x="667" y="110" key="#PHP" timestamp="1587384193399">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -286,18 +341,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="714" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588204940062" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589447183976">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2610" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589956285210">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589447183976" />
+    <state x="2610" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589956285210" />
     <state x="707" y="376" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1588303282964">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="376" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588303282964" />
-    <state x="588" y="114" key="CommitChangelistDialog2" timestamp="1589768349332">
+    <state x="588" y="114" key="CommitChangelistDialog2" timestamp="1589781899227">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="588" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589768349332" />
+    <state x="588" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589781899227" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1588646072223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -342,10 +398,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="122" y="151" width="1736" height="856" maximized="true" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588646072223" />
-    <state x="-179" y="48" width="1736" height="890" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589605390213">
+    <state x="-179" y="48" width="1736" height="890" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1590092921218">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-179" y="48" width="1736" height="890" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589605390213" />
+    <state x="-179" y="48" width="1736" height="890" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590092921218" />
     <state x="654" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1589343203430">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -354,21 +410,40 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="729" y="150" width="494" height="739" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587930560838" />
-    <state x="1968" y="0" width="1399" height="1027" maximized="true" key="dock-window-1" timestamp="1587462465433">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1968" y="0" width="1399" height="1027" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587462465433" />
-    <state x="593" y="65" width="734" height="909" key="find.popup" timestamp="1589223942968">
+    <state x="89" y="354" width="1741" height="871" key="dock-window-1" timestamp="1590132257968">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="593" y="65" width="734" height="909" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589223942968" />
+    <state x="89" y="354" width="1741" height="871" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590132257968" />
+    <state x="593" y="65" width="734" height="909" key="find.popup" timestamp="1589819237197">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="593" y="65" width="734" height="909" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589819237197" />
+    <state x="896" y="277" key="ftp.server.browser" timestamp="1590034776087">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="896" y="277" key="ftp.server.browser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590034776087" />
+    <state x="830" y="412" key="publish.login" timestamp="1590047617219">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="830" y="412" key="publish.login/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590047617219" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1589225416462">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589225416462" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1589361840614">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1590036903452">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589361840614" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590036903452" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/model/sheet.php</url>
+          <line>67</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

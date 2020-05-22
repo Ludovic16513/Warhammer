@@ -24,14 +24,13 @@
 
 
         <p>Votre article</p>
-        <textarea name="update_content"
-           maxlength="1000"  required placeholder="Ecrivez votre texte ici"><?php echo $result['content'] ?>
+        <textarea name="update_content" required placeholder="Ecrivez votre texte ici"><?php echo $result['content'] ?>
         </textarea>
 <?php } ?>
 
         <p>Choisissez une photo.</p>
         <input type="hidden" name="MAX_FILE_SIZE" value="2097152">
-        <input type="file" name="photo_update">
+        <input type="file" name="photo">
 
         <button type="submit" name="update_article">Update</button>
 

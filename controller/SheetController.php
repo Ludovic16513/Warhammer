@@ -23,10 +23,10 @@ class SheetController
         if (isset($_SESSION['user'])) {
 
             $session = $_SESSION['user'];
+            $escape_session = $this->sheet->escape_string($session);
+            $this->sheet->set_session($escape_session);
 
-            $this->sheet->escape_string($session);
-
-            $this->sheet->select_sheets($session);
+            $this->sheet->select_sheets();
             $row = $this->sheet->getRow();
 
             include 'view/sheet/user_sheet.php';
@@ -36,19 +36,16 @@ class SheetController
         }
     }
 
-    /**
-     *
-     */
+    // <---- REQUETE DE CREATION D 'UNE FEUILLE ---->
+
     public function create_sheet()
     {
-        // <---- REQUETE DE CREATION D 'UNE FEUILLE ---->
+        $id_user = $_GET['id_user'];
+        $escape_id = $this->sheet->escape_string($id_user);
+        $this->sheet->set_id_user($escape_id);
 
-        $id_user = $this->sheet->escape_string($_GET['id']);
-
-        $this->sheet->insert_sheet($id_user);
-
+        $this->sheet->insert_sheet();
         $_SESSION['message'] = 'Feuille ajouté';
-
         $_SESSION['user'];
         header('Location: index.php?controller=sheet&action=select_sheets');
     }
@@ -56,12 +53,14 @@ class SheetController
 
     public function delete_sheet()
     {
-        // <---- SUPPRESSION D'UN UTILISATEUR ---->
+        // <---- SUPPRESSION D'UNE FEUILLE ---->
 
         // Lance la méthode puis redirection vers la page de login.
 
-        $id = $this->sheet->escape_string($_GET['id']);
-        $this->sheet->delete_sheet($id);
+        $id_sheet = $_GET['id'];
+        $escape_id_sheet = $this->sheet->escape_string($id_sheet);
+        $this->sheet->set_sheet_id($escape_id_sheet);
+        $this->sheet->delete_sheet();
         $_SESSION['Message'] = 'Feuille supprimée';
         header('Location: index.php?controller=sheet&action=select_sheets');
     }

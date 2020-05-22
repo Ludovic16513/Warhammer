@@ -23,7 +23,7 @@
     <div class="container-nav">
         <div class="c0-nav"><a href="index.php?controller=article&action=home_articles">LE GUET</a></div>
         <div class="c1-nav"><a href="index.php?controller=user&action=home_admin">LE TRÔNE</a></div>
-        <div class="c2-nav">L'ARMURERIE</div>
+        <div class="c2-nav">LE DEDALE</div>
         <div class="c3-nav"><a href="index.php?controller=user&action=user_login">CONNEXION</a></div>
     </div>
 </header>
@@ -33,10 +33,8 @@
 </nav>
 
 <script type="text/javascript" src="js/captcha.js"></script>
-<script src="https://www.google.com/recaptcha/api.js?render=6LdTAPgUAAAAANxnCIPfTXtwDferCQqgyFhvxnus"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6Lc9__cUAAAAAAGD8ysZMYRLlxP8LGJbB6zn0nFq"></script>
 </body>
-
-
 
 </html>
 

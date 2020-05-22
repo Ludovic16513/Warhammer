@@ -10,8 +10,7 @@ try { //Test erreur.
     * ex : Guerriers */
     $unit = $db->real_escape_string($_POST['select_unit']);
 
-    /* Requête bd avec jointure de la table associative,
-     * permet d'obtenir : unité -> coût. */
+     /* permet d'obtenir : unité -> coût. */
     $sql = "SELECT cost FROM unit WHERE name = '$unit'";
 
 

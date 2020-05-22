@@ -43,7 +43,7 @@ foreach ($row as $result) { ?>
              $timestamp = strtotime($result['date']);
              ?>
              <div class="sheet-title">
-                 <a href="js/calculator/calculator.php?id=<?php echo $result['id_sheet_prim'] ?>"><?php echo $result['title'] ?></a>
+                 <a href="js/calculator/calculator.php?id_user=<?php echo $result['id_sheet_prim'] ?>"><?php echo $result['title'] ?></a>
              </div>
              <div class="sheet-date">
                  <?php echo date("d-m-Y", $timestamp); ?>

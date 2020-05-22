@@ -9,7 +9,7 @@ if (isset($_SESSION['user'])) { // Test si l'utiliseur connecté
 
     /* Valeur id de l'utilisateur
     * ex : 2 */
-    $id = $db->real_escape_string($_GET['id']);
+    $id = $db->real_escape_string($_GET['id_user']);
 
     /* Requête bd avec jointure,
     *  permet d'obtenir : feuille -> contenu. */
