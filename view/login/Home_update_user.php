@@ -30,6 +30,10 @@
                pattern="[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([_\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})"
                value="<?php echo utf8_encode($result['email']) ?>">
 
+        <p>Activation</p>
+        <input type="number" value="<?php echo $result['active'] ?>" name="update_active" required placeholder="0 ou 1" maxlength="1">
+
+
         <input type="hidden" name="id" value="<?php echo $result['id'] ?>">
 
         <button type="submit" name="update_user">Mettre à jour</button>

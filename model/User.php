@@ -13,6 +13,7 @@ class User
     private $password;
     private $email;
     private $id;
+    private $active;
 
 
     /**
@@ -43,6 +44,14 @@ class User
     public function get_id()
     {
         return $this->id;
+    }
+
+    /**
+     * @return int
+     */
+    public function get_active()
+    {
+        return $this->active;
     }
 
     /**
@@ -92,6 +101,11 @@ class User
         $this->email = $email;
     }
 
+    public function set_active(int $active)
+    {
+        $this->active = $active;
+    }
+
 
     // < --------- CONNEXION UTILISATEUR --------->
 
@@ -138,6 +152,24 @@ class User
             return false;
         }
     }
+
+
+    // <------ ENVOI UN MAIL  ----->
+    public function send_mail($email, $message)
+    {
+        $subject = 'Demande d\'un utilisateur';
+        $header = "From:$email";
+        $to = 'wicesa8283@gilfun.com';
+        $mail = mail($to, $subject, $message, $header);
+
+        if ($mail) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
 
     // < ---- VERIFICATION DU MAIL --->
 
@@ -259,7 +291,32 @@ class User
         }
     }
 
-    //<----- CREATION D UN UTILISATEUR ------>
+    //<----- ADMIN CREATION D UN UTILISATEUR ------>
+
+    public function create_login_admin(){
+
+        $username = $this->get_username();
+        $password = $this->get_password();
+        $active = $this->get_active();
+        $email = $this->get_email();
+
+        $key = md5(microtime(TRUE) * 100000);
+        $hash = password_hash($password, PASSWORD_BCRYPT);
+
+        // on prepare la requête en indiquant les lignes à insérer.
+        $stmt = $this->mysqli->prepare('INSERT INTO user(name, password, email, user_key, active) VALUES (?,?,?,?,?)');
+        // on ajoute les valeurs à la préparation et on définit leurs types.
+        $stmt->bind_param("ssssi", $username, $hash, $email, $key, $active);
+        // On execute le la requête.
+        if ($stmt->execute()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    //<-----  USER CREATION D UN UTILISATEUR ------>
 
     /**
      * @return string
@@ -311,7 +368,7 @@ class User
                 // < --- ENVOI DU MAIL --->
                 $recipient = $email;
                 $subject = "Activation de votre compte";
-                $heading = "From: inscription@LamineDuNainBlanc.com";
+                $header = "From: inscription@LamineDuNainBlanc.com";
 
                 $message =
                     'Bienvenue sur LamineDuNainBlanc
@@ -324,7 +381,7 @@ class User
 
                 ini_set('display_errors', 1);
 
-                mail($recipient, $subject, $message, $heading);
+                mail($recipient, $subject, $message, $header);
                 return $_SESSION['message'] = 'Inscription validée';
             } else {
                 return $_SESSION['message'] = 'Utilisateur ou Email déjà existant';
@@ -344,13 +401,14 @@ class User
     {
         $password = $this->get_password();
         $username = $this->get_username();
+        $active = $this->get_active();
         $email = $this->get_email();
         $id = $this->get_id();
         $hash = password_hash($password, PASSWORD_BCRYPT);
 
-        $sql = 'UPDATE user SET name=?, password=?, email=? WHERE id=?';
+        $sql = 'UPDATE user SET name=?, password=?, active=?, email=? WHERE id=?';
         $stmt = $this->mysqli->prepare($sql);
-        $stmt->bind_param('sssi', $username, $hash, $email, $id);
+        $stmt->bind_param('ssiss', $username, $hash, $active, $email, $id);
 
         if ($stmt->execute()) {
             return true;

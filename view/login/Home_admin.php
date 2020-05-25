@@ -24,7 +24,7 @@
 
 
 <div class="container-c0">
-    <div></div>
+    <div class="c0"><a class="a-add" href="index.php?controller=user&action=admin_create_user"></a></div>
     <?php
     foreach ($row as $result) {;
         $timestamp = strtotime($result['date_joined']);?>

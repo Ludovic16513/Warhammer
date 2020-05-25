@@ -22,6 +22,7 @@ if (isset($_SESSION['user'])) { // Test si l'utiliseur connecté
 ?>
 
 
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -36,27 +37,28 @@ if (isset($_SESSION['user'])) { // Test si l'utiliseur connecté
 
     <!-- Header -->
     <div class="container-title_sheet">
-        <span class="back-sheets">
-            <a href="../../index.php?controller=sheet&action=select_sheets">Retour</a>
-        </span>
-        <span class="title">
-            <!-- TO DO -->
-        </span>
+        <div class="back-sheets"><a href="../../index.php?controller=sheet&action=select_sheets">Retour</a></div>
+
+        <div class="title">
+           <?php $row = mysqli_fetch_array($result) ?>
+               <input id="input_title" type="text" value="<?php echo $row['title'];?>" name="title_sheet">
+               <input id="id_sheet_user" type="hidden" name="id_sheet_user" value="<?php echo $row['id_user']; ?>">
+        </div>
     </div>
 
-    <div class="total">
-        <label for="total_army">Total :</label>
-        <input id="total_army" type="number">
+    <div class="container_total">
+        <p id="total_army">total :</p>
+        <input id="total_input_value" type="hidden">
     </div>
 
     <!-- DEBUT: Calculateur -->
-    <div class="calculator_container">
-        <div id="loading">
-            <p>CHARGEMENT/CALCUL DES DONNNES EN COURS...</p>
-        </div>
+        <div id="loading"><p>CHARGEMENT/CALCUL DES DONNNES EN COURS...</p></div>
         <!-- Formulaire d'ajout d'unité -->
-        <div class="add-form">
-            <!-- Selecteur d'unité -->
+
+    <div class="container_add-form">
+
+        <!-- Selecteur d'unité -->
+        <div>
             <select id="select_unit">
                 <option name="guerriers" value="Guerriers">Guerriers</option>
                 <option name="rangers" value="Rangers">Rangers</option>
@@ -68,22 +70,29 @@ if (isset($_SESSION['user'])) { // Test si l'utiliseur connecté
                 <option name="Arquebusiers" value="Arquebusiers">Arquebusiers</option>
             </select>
             <input id="input_unit_cost" class="add" type="hidden" disabled>
-            <!-- Selecteur d'arme -->
+        </div>
+
+        <!-- Selecteur d'arme -->
+        <div>
             <select id="select_weapon" name="select_weapon"></select>
             <input id="input_weapon_cost" class="add" type="hidden" disabled>
-            <!-- Selecteur d'armure -->
+        </div>
+
+        <!-- Selecteur d'armure -->
+        <div>
             <select id="select_armor" name="select_armor"></select>
             <input id="input_armor_cost" class="add" type="hidden" disabled>
-            <!-- Selecteur de nombre d'unités -->
-            <p>Entrez le nombre d'unité souhaitée</p>
-            <input id="input_unit_multiply" type="number" value="1">
-            <input id="input_calculator" type="number" disabled>
-            <button id="add_button">Ajouter</button>
-
         </div>
+        <!-- Selecteur de nombre d'unités -->
+        <div>
+                <input id="input_unit_multiply" type="number" size="2" value="1">
+        </div>
+
+        <div><input id="input_calculator" type="number" disabled></div>
+
+        <div><button id="add_button">Ajouter</button></div>
+
     </div>
-
-
         <!-- Liste d'armée -->
         <div id="army_list">
             <?php while($row = $result->fetch_assoc()) {?>
@@ -94,22 +103,19 @@ if (isset($_SESSION['user'])) { // Test si l'utiliseur connecté
                         <div class="number_unit"><?php echo $row['amount']; ?></div>
                         <div class="name_unit"><?php echo $row['unit'];?></div>
                         <div class="pts"> <?php echo $row['cost']; ?> pts</div>
-
-
-
                             <input class="total" type="hidden" value="<?php echo $row['cost']; ?>">
                         </div>
 
                         <div class="container_letter">
                             <div class="empty"></div>
                             <div class="M">M</div>
-                            <div class="CC">CC</div>
+                            <div class="CC">C</div>
                             <div class="F">F</div>
                             <div class="E">E</div>
-                            <div class="PV">PV</div>
+                            <div class="PV">P</div>
                             <div class="I">I</div>
                             <div class="A">A</div>
-                            <div class="CD">CD</div>
+                            <div class="CD">C</div>
                         </div>
 
                         <div class="container_crt">
@@ -135,12 +141,10 @@ if (isset($_SESSION['user'])) { // Test si l'utiliseur connecté
                         </div>
                          <a href="#" class="remove_unit">Delete</a>
                 </div>
-                <div class="title-sheet"></div>
-                <div id="total-sheet"> </div>
             <?php }}?>
         </div>
         <!-- Total -->
-    </div>
+
     <!-- FIN: Calculateur -->
     <form action="" method="post">
         <input id="input_id" type="hidden" name="id" value="<?php echo $id; ?>">

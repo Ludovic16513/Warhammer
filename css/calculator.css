@@ -1,18 +1,5 @@
-.unit{
-    border: 1px solid black;
-    width: 400px;
-    height: 300px;
-    margin-top: 5%;
-}
-
-
 html{
     font-family: 'Lato', sans-serif;
-}
-
-.container_title-sheet {
-    display: grid;
-    grid-template-columns: 1fr;
 }
 
 .calculator{
@@ -22,28 +9,71 @@ html{
     background-size: cover;
 }
 
-.calculator_container{
-    display: grid;
-    justify-content: center;
-
+#input_title{
+    width: 360px;
+    height: 20px;
+    font-size: 25px;
+    text-align: center;
 }
 
+.back-sheets{
+    font-size: 25px;
+}
+
+#button_update{
+    place-self: center;
+    height: 20px;
+}
+
+/* <----- TITLE CALCULATOR ------> */
+
+.container-title_sheet{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: black solid 1px;
+    background-color: rgba(255, 246, 255, 0.8);
+    padding: 20px;
+}
+
+.container_total{
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+.container_add-form{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    place-items: center;
+}
+
+
+/* <------- ARMY LIST ---------> */
 
 #army_list{
     margin-top: 5%;
     display: grid;
+    grid-template-columns: repeat(2,1fr);
     border: black solid 1px;
-    justify-content: center;
     background-color: rgba(255, 246, 255, 0.8);
+    place-items: center;
+}
+
+
+.unit{
+    border: 1px solid black;
+    width: 400px;
+    height: 225px;
+    margin: 5% 5% 5% 5%;
 }
 
 .container_unit{
     display: grid;
     grid-template-columns: 5% 1fr 1fr;
     margin: 10px;
-
 }
-
 
 .container_letter{
     display: grid;
@@ -88,26 +118,9 @@ justify-self: end;
     margin-right: 10px;
 }
 
-.number_unit{
-
-}
-
-.name_unit{
-
-}
 
 .c2, .c5, .c8{
     padding-left: 5px;
-}
-
-
-.F, .M, .E, .I, .A{
-
-}
-
-.title{
-    display: flex;
-    justify-content: center;
 }
 
 .unit{
@@ -115,49 +128,205 @@ justify-self: end;
 }
 
 
+/* <------ TOTAL ARMY ------>*/
+
 .total{
     display: flex;
     justify-content: center;
-
     margin-bottom: 2%;
 }
-
 
 @media screen and (max-width: 450px) {
 
     .calculator {
-        margin-left: 0;
-        margin-right: 0;
+        background-image: url("../img/home_userjpg.jpg");
+        background-size: auto;
+        margin: auto;
     }
 
-    .unit{
-        width: 350px;
-        height: 230px;
+    .container-title_sheet {
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr;
+        border: black solid 1px;
+        background-color: rgba(255, 246, 255, 0.8);
+        padding: 0;
+
     }
 
-    #select_armor{
-        height: 35%;
-        width: 30%;
+    #input_title {
+        width: 200px;
+        height: 20px;
+        font-size: 25px;
+        text-align: center;
     }
 
-    #select_unit{
-        height: 35%;
-        width: 30%;
-    }
-
-    #select_weapon{
-        height: 35%;
-        width: 30%;
-    }
-
-
-
-    .total{
-        font-size: 30px;
-    }
-
-    .title{
+    .back-sheets {
+        margin-bottom: 2%;
         font-size: 25px;
     }
 
+    .container_add-form {
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+    }
+
+    .container_unit {
+        grid-template-columns: 12% 1fr 1fr;
+    }
+
+    #select_unit {
+        width: 200px;
+        height: 40px;
+        margin-bottom: 10%;
+    }
+
+    #select_weapon {
+        width: 200px;
+        height: 40px;
+        margin-bottom: 10%;
+    }
+
+    #select_armor {
+        width: 200px;
+        height: 40px;
+        margin-bottom: 10%;
+    }
+
+    #input_unit_multiply {
+        width: 200px;
+        height: 40px;
+        margin-bottom: 10%;
+    }
+
+    #input_calculator {
+        width: 200px;
+        height: 40px;
+        margin-bottom: 10%;
+    }
+
+    #army_list {
+        grid-template-columns: 1fr;
+    }
+
+    .unit {
+        width: 310px;
+        height: 280px;
+    }
+
+    .number_unit {
+    }
+
+    #add_button {
+        width: 200px;
+        height: 40px;
+        margin-bottom: 10%;
+    }
+
+    #input_title {
+        margin-bottom: 10%;
+    }
 }
+
+    /* <------ TABLETTE RESPONSIVE ---------->*/
+    @media screen
+    and (max-width: 1400px)
+    and (min-width: 480px)
+    {
+        .calculator {
+            background-image: url("../img/home_userjpg.jpg");
+            background-size: cover;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        .container-title_sheet {
+            display: grid;
+            place-items: center;
+            grid-template-columns: 1fr;
+            border: black solid 1px;
+            background-color: rgba(255, 246, 255, 0.8);
+            padding: 0;
+        }
+
+
+        #input_title {
+            width: 200px;
+            height: 20px;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .back-sheets {
+            margin-bottom: 2%;
+            font-size: 25px;
+        }
+
+        .container_add-form {
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            place-items: center;
+        }
+
+        .container_unit {
+            grid-template-columns: 12% 1fr 1fr;
+        }
+
+        #select_unit {
+            width: 250px;
+            height: 60px;
+            margin-bottom: 10%;
+        }
+
+        #select_weapon {
+            width: 250px;
+            height: 60px;
+            margin-bottom: 10%;
+        }
+
+        #select_armor {
+            width: 250px;
+            height: 60px;
+            margin-bottom: 10%;
+        }
+
+        #input_unit_multiply {
+            width: 250px;
+            height: 60px;
+            margin-bottom: 10%;
+        }
+
+        #input_calculator {
+            width: 250px;
+            height: 60px;
+            margin-bottom: 10%;
+        }
+
+        #army_list {
+            grid-template-columns: 1fr;
+        }
+
+        .unit {
+            width: 435px;
+            height: 280px;
+        }
+
+        .number_unit {
+        }
+
+        #add_button {
+            width: 200px;
+            height: 40px;
+            margin-bottom: 10%;
+        }
+
+        #input_title {
+            margin-bottom: 10%;
+        }
+
+
+
+    }

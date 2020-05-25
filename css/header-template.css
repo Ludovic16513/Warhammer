@@ -30,25 +30,48 @@
 }
 
 .c2-nav {
-    grid-area: ar;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    grid-area: de;
 }
 
 .c3-nav {
+
     grid-area: co;
 }
 
+.qg{
+    grid-area: qg;
+    display: none;
+}
+
+.bi{
+    display: none;
+    grid-area: bi;
+
+}
+
+.ar{
+    display: none;
+    grid-area: ar;
+}
+
+.marge{
+    padding-bottom: 10px;
+}
 
 .container-nav {
     color: white;
     font-family: 'Lato', sans-serif;
-    margin-bottom: 2%;
     display: grid;
     background-color: black;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-areas: ". . .  gt tr ar co  . . .";
+    place-items: center;
+    grid-template-areas: ". . . gt tr de co . . ."
+                         ". . . . . ar . . . ."
+                         ". . . . . qg . . . ."
+                         ". . . . . bi . . . .";
 }
-
-
 
 .c1-header{
     font-size: 35px;
@@ -59,18 +82,27 @@
 
 @media screen and (max-width: 450px) {
 
+    .container-nav{
+        font-size: 30px;
+        grid-template-columns:  1fr;
+        grid-template-areas:
+                "co"
+                "tr"
+                "gt"
+                "de"
+                "ar"
+                "qg"
+                "bi";
+    }
+
+    .c2-nav {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
     .container-header {
         height: 75px;
-
     }
-    .container-nav {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas:
-                "gt tr ar co";
-        font-size: 13px;
-        place-items: center;
-    }
-
     .c1-header{
         background-position: center;
         font-size: 22px;
@@ -82,5 +114,39 @@
         height: 80px;
         background-position: center;
     }
-
 }
+    @media screen
+    and (max-width: 1400px)
+    and (min-width: 480px)
+    {
+        .container-nav{
+            font-size: 20px;
+            grid-template-columns:  repeat(4, 1fr);
+            grid-template-areas:
+                    "gt tr de co"
+                    "  . . ar .  "
+                    "  . . qg .  "
+                    "  . . bi .  ";
+        }
+        .c2-nav {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .container-header {
+            height: 75px;
+        }
+        .c1-header{
+            background-position: center;
+            font-size: 22px;
+            background-size: 50px;
+        }
+
+        .c0-header{
+            background-size: 60px;
+            height: 80px;
+            background-position: center;
+        }
+
+    }
+

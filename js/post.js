@@ -2,6 +2,7 @@
 const weapon_input = document.getElementById('select_weapon');
 const input_armor = document.getElementById('select_armor');
 const id_input_hidden = document.getElementById('input_id').value;
+const id_user_input_hidden = document.getElementById('id_sheet_user').value;
 
 let nb_requete_terminees = 0;
 
@@ -299,6 +300,12 @@ $("#add_button").click(function () {
     insert_unit();
 })
 
+$("#input_unit_multiply").bind('input',function() {
+    $('#input_unit_multiply').val();
+    refresh_total_cost();
+});
+
+
 /* Méthode pour calculer le cout total de l'ajout en cours */
 function refresh_total_cost(){
     const unit_cost = $('#input_unit_cost').val();
@@ -314,18 +321,73 @@ function refresh_total_cost(){
     $('#input_calculator').val(total_cost);
 }
 
+
+
 /* Méthode pour calculer le cout total de la liste d'armée */
 function refresh_army_cost(){
     const units = $("#army_list .total");
     let army_cost = 0;
+
     for(const unit of units){
         army_cost += parseInt(unit.value);
     }
-    $('#total_army').val(army_cost);
+
+    $('#total_army').html(` Total : ${army_cost} / 2000 pts` );
+    var total =   $('#total_input_value').val(army_cost)
+
+    var total_input = document.getElementById('total_input_value').value
+    var limit = 2000
+
+    console.log('limit :'+ limit);
+    console.log('total :'+ total_input);
+
+    if(total_input >= limit)
+    {
+        $('#total_army').css("color", "red")
+    }
+    else {
+        $('#total_army').css("color", "black")
+    }
 }
+
+
+
 
 $(document).ready(function () {
     refresh_delete_links();
     refresh_unit_value();
     refresh_army_cost();
+});
+
+
+$(document).ready(function () {
+/* Update le titre */
+$('#input_title').keypress(function(event) {
+
+    const input_title = document.getElementById("input_title").value;
+
+    console.log('[title] Data send :');
+    console.log(input_title);
+
+    console.log('[id_sheet_prim] Data send :');
+    console.log(id_input_hidden);
+
+
+    if (event.keyCode === 13) {
+        $.ajax({
+            url: 'update.php',
+            type: 'POST',
+            data: { id_sheet_prim: id_input_hidden, title: input_title },
+            success: (function () {
+                console.log('mise à jour effectuée');
+            }),
+            error : function(result, statut, erreur){
+                console.log('Erreur update');
+                console.log(result);
+                console.log(statut);
+                console.log(erreur);
+            }
+        })
+    }
+})
 });

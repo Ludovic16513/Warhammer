@@ -28,7 +28,6 @@ textarea{
 #container-login{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 500px;
     margin-top: 5%;
 }
 
@@ -46,8 +45,42 @@ border-right: black 1px solid;
 .inscription_admin{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 500px;
     margin-top: 5%;
     justify-content: center;
     place-items: center;
+}
+
+@media screen and (max-width: 450px) {
+
+    #container-login{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 230px;
+    }
+
+    .login{
+        border: none;
+        padding-right: 0;
+        justify-self: center;
+    }
+
+    .inscription{
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .input_login{
+        width: 150px;
+        height: 30px;
+    }
+}
+
+@media screen
+and (max-width: 1400px)
+and (min-width: 480px)
+{
+    .input_login{
+        width: 150px;
+        height: 30px;
+    }
+
 }

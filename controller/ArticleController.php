@@ -31,8 +31,10 @@ class ArticleController
 
     public function home_article()
     {
-        $id = $this->article->escape_string($_GET['id']);  // Valeur du paramêtre url id = (ex 2) de l'article et affiche l'article de la valeur (id).
-        $this->article->read_one_article($id);
+        $id = $_GET['id'];
+        $escape_id = $this->article->escape_string($id);  // Valeur du paramêtre url id = (ex 2) de l'article et affiche l'article de la valeur (id).
+        $this->article->set_id_article($escape_id);
+        $this->article->read_one_article();
         $row = $this->article->getRow();
         include 'view/article/home_article.php';
     }
@@ -129,13 +131,12 @@ class ArticleController
 
             $escape_picture = $this->article->escape_string($picture);
             $escape_article_id = $this->article->escape_string($id_article);
-            $escape_content = $this->article->escape_string($content);
-            $escape_title = $this->article->escape_string($title);
+
 
             $this->article->set_picture($escape_picture);
             $this->article->set_id_article($escape_article_id);
-            $this->article->set_content($escape_content);
-            $this->article->set_title($escape_title);
+            $this->article->set_content($content);
+            $this->article->set_title($title);
 
             if ($this->article->upload_picture()) {
                 $this->article->update_article_admin();

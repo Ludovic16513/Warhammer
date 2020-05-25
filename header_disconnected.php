@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="utf-8">
     <title>La mine du nain blanc</title>
+    <link rel="shortcut icon" type="image/png" href="jasmine/lib/jasmine-3.5.0/jasmine_favicon.png">
+    <link rel="stylesheet" type="text/css" href="jasmine/lib/jasmine-3.5.0/jasmine.css">
+    <script type="text/javascript" src="jasmine/lib/jasmine-3.5.0/jasmine.js"></script>
+    <script type="text/javascript" src="jasmine/lib/jasmine-3.5.0/jasmine-html.js"></script>
+    <script type="text/javascript" src="jasmine/lib/jasmine-3.5.0/boot.js"></script>
     <link rel="stylesheet" href="css/articles_templates.css">
     <link rel="stylesheet" href="css/admin_template.css">
     <link rel="stylesheet" href="css/footer_template.css">
@@ -13,6 +17,7 @@
     <link rel="stylesheet" href="css/calculator.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-3.5.1.js"></script>
 </head>
 
 <header>
@@ -21,19 +26,21 @@
         <div class="c1-header">LA MINE DU NAIN BLANC</div>
     </div>
     <div class="container-nav">
-        <div class="c0-nav"><a href="index.php?controller=article&action=home_articles">LE GUET</a></div>
-        <div class="c1-nav"><a href="index.php?controller=user&action=home_admin">LE TRÔNE</a></div>
-        <div class="c2-nav">LE DEDALE</div>
-        <div class="c3-nav"><a href="index.php?controller=user&action=user_login">CONNEXION</a></div>
+        <div class="c0-nav"><a href="index.php?controller=article&action=home_articles">GUET</a></div>
+        <div class="c1-nav"><a href="index.php?controller=user&action=home_admin">TRÔNE</a></div>
+        <div class="c2-nav">DEDALE</div>
+        <div class="ar marge">ARMURERIE</div>
+        <div class="qg marge">QG</div>
+        <div class="bi marge">BIBLIOTHEQUE</div>
+        <div class="c3-nav "><a href="index.php?controller=user&action=user_login">CONNEXION</a></div>
     </div>
 </header>
 
 <body>
-<nav class="container-nav">
-</nav>
 
-<script type="text/javascript" src="js/captcha.js"></script>
 <script src="https://www.google.com/recaptcha/api.js?render=6Lc9__cUAAAAAAGD8ysZMYRLlxP8LGJbB6zn0nFq"></script>
+<script src="js/menu.js"></script>
+
 </body>
 
 </html>

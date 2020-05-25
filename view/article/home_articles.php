@@ -1,4 +1,4 @@
-<body class="articles">
+<div class="articles">
 
 <div class="container-js">
        <p class="c0-js" >Les nouvelles de l'éclaireur</p>
@@ -25,4 +25,4 @@ foreach ($row as $article){
 
 </div>
 
-</body>
+</div>

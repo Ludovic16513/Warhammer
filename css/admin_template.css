@@ -48,7 +48,7 @@
     place-items: center;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(1, auto);
-    margin-top: 1%;
+    margin-top: 2%;
 }
 
 .c0{
@@ -94,6 +94,11 @@
     background-size: cover;
 }
 
+
+
+/* ----------- FIN -----------*/
+
+
 .a-delete {
     display: block;
     width: 25px;
@@ -116,6 +121,7 @@
 .c3:hover{
     background-color: #ff0000;
 }
+
 
 .container-title{
     display: grid;
@@ -147,44 +153,126 @@
 
 }
 
+
+/* < -------- ADAPTATION POUR TELEPHONE ------------->*/
+
 @media screen and (max-width: 450px) {
+
     .container-title{
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
+
     }
 
+
+    .c0-title{
+        margin-bottom: 5%;
+    }
+
+    .c1-bar{
+        grid-column: 1;
+    }
+
+    .c2-bar{
+        grid-column: 1;
+    }
+
+    .c3-bar{
+        grid-column: 1;
+    }
+    .c4-bar{
+        grid-column: 1;
+    }
 
 
     .container-bar{
-        place-items: start;
-        grid-template-columns: repeat(3, 10% 45% 15%);
-        font-size: 17px;
-        margin-top: 15%;
-    }
-
-    .container-c0{
-        margin-top: 5%;
-        font-size: 15px;
-    }
-
-    .c0-title{
-        margin-top: 5%;
-    }
-
-    .c1{
-        padding-top: 0;
-        padding-bottom: 0;
-         width: 150px;
-    }
-
-.c2-bar{
-}
-
-    .c5{
-        width: 30px;
-        justify-content: center;
+        grid-template-columns: 1fr;
+        place-content: center;
+        font-size: 30px;
+        margin-bottom: 5%;
     }
 
     .container-menu{
-        margin-top: 10%;
+        font-size: 30px;
+        margin-bottom: 5%;
     }
+
+    .container-c0{
+        grid-template-columns: 1fr;
+        font-size: 20px;
+    }
+
+    .a-add{
+        grid-column: 1;
+    }
+
+    .a-delete{
+        grid-column: 1;
+    }
+
+    .c0{
+        grid-column: 1;
+    }
+
+    .c1{
+        grid-column: 1;
+    }
+    .c2{
+        grid-column: 1;
+    }
+
+    .c3{
+        grid-column: 1;
+    }
+}
+
+
+
+@media screen
+and (max-width: 950px)
+and (min-width: 450px) {
+
+    .container-title{
+        grid-template-columns: 1fr;
+    }
+
+    .container-bar{
+
+        font-size: 30px;
+
+    }
+
+    .container-menu{
+        font-size: 30px;
+    }
+
+    .container-c0{
+        font-size: 20px;
+    }
+}
+
+@media screen
+and (max-width: 1400px)
+and (min-width: 480px)
+{
+
+    .container-title{
+        grid-template-columns: 1fr;
+    }
+
+    .container-bar{
+
+        font-size: 30px;
+
+    }
+
+    .container-menu{
+        font-size: 30px;
+    }
+
+    .container-c0{
+        font-size: 20px;
+    }
+
+
+
 }

@@ -135,7 +135,6 @@ class sheet
             $_SESSION['message'] = "Echec lors de l'exécution de la requête : (" . $stmt->errno . ") " . $stmt->error;
         }
 
-
     }
 
 

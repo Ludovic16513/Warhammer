@@ -39,12 +39,9 @@ class UserController
             $escape_username = $this->user->escape_string($username);
             $this->user->set_username($escape_username);
 
-
             $password = $_POST['password'];
             $escape_password = $this->user->escape_string($password);
             $this->user->set_password($escape_password);
-
-
 
             // Lance la vérification de connexion en base de donnée
             $auth = $this->user->check_login_user();
@@ -174,6 +171,10 @@ class UserController
                 $escape_email = $this->user->escape_string($email);
                 $this->user->set_email($escape_email);
 
+                $email = $_POST['POST_CreateEmail'];
+                $escape_email = $this->user->escape_string($email);
+                $this->user->set_email($escape_email);
+
                 if ($this->user->verify_captcha($captcha)) {
                     $this->user->create_login();
                     $_SESSION['message'] = 'Inscription validé';
@@ -190,6 +191,63 @@ class UserController
             include 'view/login/login_user.php';
         }
 
+    }
+
+
+    public function create_user_admin()
+    {
+        if ($_POST['POST_CreatePassword'] === $_POST['POST_ConfirmPassword']) {
+
+            if (isset($_POST['create'])) { // Récuperation des input -> requête de creation
+
+                $captcha = $_POST['g-recaptcha-response'];
+
+                $username = $_POST['POST_CreateUser'];
+                $escape_username = $this->user->escape_string($username);
+                $this->user->set_username($escape_username);
+
+                $password = $_POST['POST_CreatePassword'];
+                $escape_password = $this->user->escape_string($password);
+                $this->user->set_password($escape_password);
+
+                $email = $_POST['POST_CreateEmail'];
+                $escape_email = $this->user->escape_string($email);
+                $this->user->set_email($escape_email);
+
+                $active = $_POST['POST_active'];
+                $this->user->set_active($active);
+
+                if ($this->user->verify_captcha($captcha)) {
+
+                    $this->user->create_login_admin();
+
+                    $_SESSION['message'] = 'Inscription validé';
+
+                    if ($this->user->read_all_user())
+                    {
+                        $row = $this->user->getRow();
+                        include 'view/login/Home_admin.php';
+                    }
+                } else {
+                    $_SESSION['message'] = 'Captcha non vérifié ';
+                    if ($this->user->read_all_user())
+                    {
+                        $row = $this->user->getRow();
+                        include 'view/login/Home_admin.php';
+                    }
+
+                }
+            }
+        }
+        else {
+            $_SESSION['message'] = 'Le mot de passe ne correspond pas';
+            if ($this->user->read_all_user())
+            {
+                $row = $this->user->getRow();
+                include 'view/login/Home_admin.php';
+            }
+
+        }
     }
 
     // <---- PAGE DE MISE A JOUR UTILISATEUR ---->
@@ -222,16 +280,19 @@ class UserController
             $email = $_POST['update_email'];
             $password = $_POST['update_pass'];
             $id = $_POST['id'];
+            $active = $_POST['update_active'];
 
            $escape_username = $this->user->escape_string($username);
            $escape_password = $this->user->escape_string($password);
            $escape_email = $this->user->escape_string($email);
            $escape_id = $this->user->escape_string($id);
+           $escape_active = $this->user->escape_string($active);
 
            $this->user->set_username($escape_username);
            $this->user->set_password($escape_password);
            $this->user->set_email($escape_email);
            $this->user->set_id($escape_id);
+           $this->user->set_active($escape_active);
 
            $update = $this->user->update_user();
 
@@ -294,4 +355,31 @@ class UserController
             echo "Votre compte est déjà actif ou l'activation a échouée .";
         }
     }
+
+    function contact_page()
+    {
+        include 'view/login/contact.php';
+    }
+
+    function send_mail()
+    {
+        $captcha = $_POST['g-recaptcha-response'];
+
+        if ($this->user->verify_captcha($captcha)) {
+            $email = $_POST['email_user'];
+            $mail_content = $_POST['mail_content'];
+
+            if ($this->user->send_mail($email, $mail_content))
+            {
+                $_SESSION['message'] = 'mail envoyé';
+                include 'view/login/contact.php';
+            }
+            else{
+                $_SESSION['message'] = 'problème rencontré dans l\'envoi de mail';
+                include 'view/login/contact.php';
+            }
+        }
+    }
+
+
 }

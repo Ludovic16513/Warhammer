@@ -29,15 +29,14 @@
     <form  action="index.php?controller=user&action=user_chklogin" method="post">
 
         <p>Votre pseudo</p>
-        <input type="text" pattern="[a-zA-Z0-9]+" name="username" required placeholder="Pseudo">
+        <input class="input_login" type="text" pattern="[a-zA-Z0-9]+" name="username" required placeholder="Pseudo">
 
         <p>Votre password</p>
-        <input type="password" name="password"  required placeholder="Password">
+        <input  class="input_login" type="password" name="password"  required placeholder="Password">
 
         <p></p>
-        <button type="submit" name="login_user">Connexion</button>
+        <button class="input_login" type="submit" name="login_user">Connexion</button>
     </form>
-
     </div>
 
     <div class="inscription">
@@ -47,17 +46,18 @@
             <p> Inscrivez vous c'est gratuit et vous pourrez creer vos fiches d'armée !</p>
             <br>
             <p>Pseudo<p>
-            <input class="post" type="text" name="POST_CreateUser" pattern = "[a-zA-Z0-9]+" placeholder="Louis1651" minlength="6" maxlength="20" >
+            <input class="input_login" type="text" name="POST_CreateUser" pattern = "[a-zA-Z0-9]+" placeholder="Louis1651" minlength="6" maxlength="20" >
             <p>Password</p>
-            <input type="password" name="POST_CreatePassword"  required  placeholder="ex : Louis59740" minlength="8" maxlength="20" pattern = "^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+            <input  class="input_login" type="password" name="POST_CreatePassword"  required  placeholder="ex : Louis59740" minlength="8" maxlength="20" pattern = "^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
             <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
             <p>Confirmez</p>
-            <input type="password" name="POST_ConfirmPassword"  required  placeholder="ex : Louis59740" minlength="8" maxlength="20" pattern = "^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+            <input  class="input_login" type="password" name="POST_ConfirmPassword"  required  placeholder="ex : Louis59740" minlength="8" maxlength="20" pattern = "^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
             <p>Email</p>
-            <input type="email" name="POST_CreateEmail" required  pattern = "[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([_\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})"
+            <input type="email" class="input_login" name="POST_CreateEmail" required  pattern = "[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([_\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})"
                    placeholder="Prenom@mail.com">
             <p></p>
-            <button type="submit" name="create">Inscription</button>
+            <button type="submit" class="input_login" name="create">Inscription</button>
+            <p></p>
         </form>
     </div>
 

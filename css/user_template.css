@@ -10,6 +10,7 @@
     padding: 20px;
     border: solid 1px black;
     height: 100%;
+    margin-top: 2%;
 }
 
 .container_user-1 {
@@ -101,7 +102,6 @@
 .sheet_add {
     font-size: 10px;
     justify-self: center;
-    grid-area: ad;
 }
 
 
@@ -120,7 +120,6 @@ grid-column: 3/4;
     background-image: url("../img/bomb.png");
     background-repeat: no-repeat;
     background-size: cover;
-
     width: 25px;
     height: 25px;
     grid-column: 5/6;
@@ -129,54 +128,162 @@ grid-column: 3/4;
 
 @media screen and (max-width: 450px) {
 
-    .container_user-0{
+
+    .container_user-0 {
         margin-right: 0;
         margin-left: 0;
+        padding: 0;
     }
 
     .container_user-1 {
+        font-size: 20px;
         display: grid;
-        grid-template: "disc . ps . jo ." / 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template: "disc ps"
+                       "jo ." / 1fr;
     }
 
     .container_user-2 {
         margin-top: 10%;
-        font-size: 15px;
-        grid-template: "pr . ad . . sh " / 1fr 1fr ;
+        display: grid;
+        place-items: center;
+        font-size: 25px;
+        grid-template: "pr"
+                       "ad"
+                       "sh" / 1fr;
+    }
+
+    .container_user-3 {
+        font-size: 25px;
+        display: grid;
+        grid-template: "rk" "vt";
     }
 
     .container_user-4 {
         margin-top: 10%;
+        font-size: 25px;
         display: grid;
-        grid-template: "tl tl dt dt d " / 1fr 1fr 1fr 1fr 1fr;
+        place-items: center;
+        grid-template: "tl"
+                       "dt"
+                        "d" / 1fr;
     }
 
-    .container_user-5{
+    .container_user-5 {
+        margin-top: 10%;
+        font-size: 25px;
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        place-items: center;
+        grid-template-columns: 1fr;
     }
 
-    .sheet-title{
-
-        grid-column: 1/3;
+    .sheet-title {
+        grid-column: 1;
     }
 
-    .sheet-date{
-        grid-column: 3/5;
+    .sheet-date {
+        grid-column: 1;
     }
 
-    .sheet-delete{
+    .sheet-delete {
         justify-self: center;
         background-image: url("../img/bomb.png");
         background-repeat: no-repeat;
         background-size: cover;
+        margin-bottom: 2%;
         width: 25px;
         height: 25px;
-        grid-column: 5/6;
+        grid-column: 1;
+    }
+}
+
+
+
+@media screen
+and (max-width: 950px)
+and (min-width: 450px)
+{
+
+    .container_user-1 {
+        font-size: 30px;
+        display: grid;
+        grid-template: "disc ps jo" / 1fr 1fr 1fr;
+        place-content: center;
     }
 
-    .disconnect{
-        font-size: 15px;
+    .container_user-3{
+        font-size: 30px;
     }
+
+    .container_user-2{
+        grid-template: "pr ad sh" / 1fr 1fr 1fr;
+    }
+
+    .container_user-4{
+        grid-template: "tl dt d" / 1fr 1fr 1fr;
+        font-size: 30px;
+    }
+
+    .container_user-5{
+        grid-template-columns: repeat(3, 1fr);
+        font-size: 25px;
+    }
+
+
+    .container_user-0 {
+        margin-right: 5%;
+        margin-left: 5%;
+        padding: 0;
+    }
+
+    .sheet-title{
+        grid-column: 1/2;
+    }
+
+    .sheet-date{
+        grid-column: 2/3;
+    }
+
+    .sheet-delete{
+        grid-column: 3/4;
+    }
+
+
+
+}
+
+@media screen
+and (max-width: 1400px)
+and (min-width: 960px)
+{
+    .container_user-5{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .container_user-4{
+        grid-template: "tl dt d" / 1fr 1fr 1fr;
+        font-size: 30px;
+    }
+    .container_user-0 {
+        margin-right: 5%;
+        margin-left: 5%;
+        padding: 0;
+        font-size: 25px;
+    }
+
+.sheet-title{
+    grid-column: 1/2;
+}
+
+    .sheet-date{
+        grid-column: 2/3;
+    }
+
+.sheet-delete{
+    grid-column: 3/4;
+}
+
+
+
 
 }

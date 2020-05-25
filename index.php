@@ -15,8 +15,9 @@ else {
 }
 
 
-//un switch qui appellera le bon controller en fonction des variables.
+//un switch qui appellera le bon controller en fonction des parametres.
 switch ($controller) {
+
     case"user":
 
         require "controller/UserController.php";
@@ -24,52 +25,58 @@ switch ($controller) {
         $ctrl = new UserController();
 
         switch ($action) {
-            case"user_login":
-                $ctrl->login_user();
+
+            // <------ ADMIN CASE  ------->
+
+            case"admin_login"; // lance la page de login a l'espace admin
+                $ctrl->login_admin();
                 break;
 
-            case"admin_login":
-                $ctrl->login_admin();
+            case"admin_chklogin": // lance la requete de connexion a l'espace admin
+                $ctrl->check_login_admin();
+                break;
+
+            case"home_admin": // lance la page gestion membre de l'espace admin
+                $ctrl->home_admin();
+                break;
+
+            case "update_user"; // lance la page de mise a jour utilisateur
+                $ctrl->home_update_user();
+                break;
+
+            case"request_update_user": // lance la requete de mise a jour utilisateur
+                $ctrl->update_user();
+                break;
+
+            case"admin_create_user": // lance la page de creation d'un utilisateur coté admin
+                $ctrl->admin_create_user();
+                break;
+
+            case"request_create_user": // lance une requete de creation d'un utilisateur coté admin
+                $ctrl->create_user_admin();
+                break;
+
+            case"del_user": // lance une requete de suppression d'un utilisateur coté admin
+                $ctrl->delete_user();
+                break;
+
+            // <------ USER CASE  ------->
+
+            case"user_login":
+                $ctrl->login_user();
                 break;
 
             case"user_chklogin":
                 $ctrl->check_login_user();
                 break;
 
-            case"admin_chklogin":
-                $ctrl->check_login_admin();
-                break;
-
-            case "update_user";
-                $ctrl->home_update_user();
-                break;
-
-            case"request_update_user":
-                $ctrl->update_user();
-                break;
-
             case"crt_user":
                 $ctrl->create_user();
                 break;
 
-            case"admin_create_user":
-                $ctrl->admin_create_user();
-                break;
-
-
-            case"del_user":
-                $ctrl->delete_user();
-                break;
-
-
             case"home_user":
                 $ctrl->home_user();
                 break;
-
-            case"home_admin":
-                $ctrl->home_admin();
-                break;
-
 
             case"user_disconnect":
                 $ctrl->user_disconnect();
@@ -78,6 +85,15 @@ switch ($controller) {
             case"user_mail-valid":
                 $ctrl->user_mail_valid();
                 break;
+
+            case"contact_page":
+                $ctrl->contact_page();
+                break;
+
+            case"send_mail":
+                $ctrl->send_mail();
+                break;
+
         }
 
         break;

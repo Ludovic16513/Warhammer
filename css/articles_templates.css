@@ -5,6 +5,7 @@
     margin-top: 2%;
     margin-right: 20%;
     margin-left: 20%;
+    margin-bottom: 20px;
     border: black 2px solid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
@@ -20,6 +21,8 @@ a{
 .articles{
     background-image: url("../img/dwarf2.jpg");
     background-size: cover;
+    background-attachment: fixed;
+    padding: 2%;
 }
 
 
@@ -79,75 +82,9 @@ a{
     height: 160px;
 }
 
-.container-article{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-}
-
-.c0-article{
-    font-size: 25px;
-    margin-bottom: 2%;
-    margin-top: 2%;
-    grid-column-start: 3;
-    grid-column-end: 4;
-
-    grid-row-start: 1;
-    grid-row-end: 1;
-}
-
-
-
-.c1-article{
-    margin-bottom: 2%;
-    border: black solid 1px;
-    background-image: url("../img/tavern.jpg");
-    width: 700px;
-    height: 250px;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-
-
-
-.c2-article{
-    margin-bottom: 2%;
-    margin-top: 2%;
-    grid-column-start: 3;
-    grid-column-end: 4;
-
-    grid-row-start: 2;
-    grid-row-end: 2;
-}
-
-
-.c3-article{
-    white-space: pre-wrap; /* afficher les espaces */
-    margin-bottom: 2%;
-    margin-top: 2%;
-    grid-column-start: 3;
-    grid-column-end: 4;
-
-    grid-row-start: 4;
-    grid-row-end: 4;
-
-}
-
-.c0-bouton{
-    grid-column-start: 1;
-    grid-column-end: 1;
-
-    grid-row-start: 1;
-    grid-row-end: 1;
-}
-
 .container-js{
-    display: grid;
     margin-top: 2%;
+    display: grid;
     margin-right: 20%;
     margin-left: 20%;
     grid-template-columns: repeat(1, 1fr);
@@ -156,8 +93,6 @@ a{
     border: black solid 2px;
     background-size: cover;
     background-repeat: round;
-
-
 }
 
 .c0-js{
@@ -167,6 +102,89 @@ a{
     font-weight: bold;
     text-shadow: black 1px 0 10px;
 }
+
+
+/* < ---------- ARTICLE --------------> */
+
+.article{
+    background-image: url("../img/caverne.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 2%;
+}
+
+.container-article{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-right: 20%;
+    margin-left: 20%;
+    border: black 2px solid;
+    grid-template-rows: auto;
+    margin-bottom: 2%;
+    margin-top: 1%;
+
+    background-color: rgba(255, 246, 255, 0.6);
+    background-size: cover;
+}
+
+.c0-article{
+    font-size: 25px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+
+.c1-article{
+    border: black solid 1px;
+    width: 700px;
+    height: 250px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin-bottom: 2%;
+    background-image: url("../img/tavern2.jpg");
+    background-repeat: round;
+}
+
+
+
+.c2-article{
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    grid-row-start: 2;
+    grid-row-end: 2;
+    margin-bottom: 2%;
+}
+
+
+.c3-article{
+    white-space: pre-wrap; /* afficher les espaces */
+    grid-column-start: 3;
+    grid-column-end: 4;
+    padding: 5px;
+    margin-bottom: 2%;
+}
+
+.c0-bouton{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+
+
+
+
+/*<---------- RESPONSIVE TELEPHONE ---------------->*/
 
 
 @media screen and (max-width: 450px) {
@@ -251,4 +269,143 @@ width: 20%;
         margin-right: 5%;
         justify-items: center;
     }
+}
+
+
+
+@media screen
+and (max-width: 950px)
+and (min-width: 450px)
+{
+    .container-js {
+        margin-right: 5%;
+        margin-left: 5%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 160px;
+        height: 130px;
+    }
+
+
+    .container-articles {
+        margin-top: 2%;
+        margin-right: 5%;
+        margin-left: 5%;
+        grid-template-columns: repeat(1, 1fr);
+        font-size: 15px;
+        place-items: center;
+        place-content: center;
+    }
+
+    .c0-js {
+        font-size: 25px;
+    }
+
+    .c0-articles {
+        grid-column-start: 1;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        width: 350px;
+        height: 200px;
+        background-size: cover;
+        background-repeat: round;
+    }
+
+    .c1-articles {
+        width: 350px;
+        height: 130px;
+        place-self: center;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        margin-top: 0;
+    }
+
+
+
+    .c0-bouton{
+        grid-column-start: 1;
+        grid-column-end: 1;
+        width: 20%;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+
+
+    .c0-article {
+        grid-column-start: 1;
+
+    }
+
+
+    .c1-article{
+        grid-column-start: 1;
+        width: 260px;
+        height: 170px;
+    }
+
+    .c2-article{
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    .c3-article{
+        grid-column-start: 1;
+        grid-column-end: 1;
+        font-size: 15px;
+        width: 260px;
+    }
+
+    .container-article {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 5%;
+        margin-right: 5%;
+        justify-items: center;
+    }
+}
+
+
+@media screen
+and (max-width: 1400px)
+and (min-width: 950px)
+{
+
+
+    /* <-------- ARTICLE ACCEUIL ------->*/
+     .c0-js{
+         font-size: 30px;
+     }
+    .container-articles {
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .c0-articles{
+        width: 320px;
+        height: 220px;
+    }
+
+    .container-js{
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-bottom: 8%;
+        grid-template-rows: 170px;
+    }
+
+    .articles{
+        padding: 0;
+    }
+
+    /* <-------- ARTICLE PAGE ------->*/
+.container-article{
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.c1-article{
+    width: 700px;
+    height: 250px;
+}
+
 }
